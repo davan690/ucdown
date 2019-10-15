@@ -22,7 +22,7 @@ flights <- read.csv("data/flights.csv")
 
 # Tables, Graphics, References, and Labels {#ref-labels}
 
-## Tables
+## Tables {#tables}
 
 By far the easiest way to present tables in your thesis is to store the contents of the table in a CSV or Excel file, then read that file in to your R Markdown document as a data frame. Then you can style the table with the `kable` function, or functions in the [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) pacakge. 
 
@@ -112,6 +112,24 @@ As another example, here is a reference: Figure \@ref(fig:subd2).
 ## Footnotes and Endnotes
 
 You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. 
+
+## Cross-referencing chapters and sections 
+
+The [bookdown documentation](https://bookdown.org/yihui/bookdown/cross-references.html) is an excellent source for learning how to cross-reference in a bookdown project such as a huskydown document. Here we only cover the most common uses for a typical thesis. If you want something more complex or fancy, please refer to the bookdown documentation and seek help from the developers of that package. 
+
+By default, all of your chapter and section headers will get an auto-generated ID label For example, e.g., `# Chapter 1` will have an auto-generated ID `chapter-1`. Note that the ID label is all lower case, and has no spaces. If you have any kind of punctuation in your header, such as a colon (:), it will not appear in the ID label. Then in your text you can reference chapter one in your Rmd file like this: 'as discussed in Chapter `\@ref(chapter-1)`', which will print as 'as discussed in Chapter 1'
+
+We strongly recommend that you to manually assign ID labels to your chapter header to make it easy to cross-reference. For example, at the top of the Rmd file for this chapter, you can see:
+
+`# Tables, Graphics, References, and Labels {#ref-labels}`
+
+The `{#ref-labels}` part of this header is the ID label. It doesn't show in the output, but is there for us to use for easy cross-referencing, because it can be short, and we don't need to change it elsewhere our document when we update the chapter header. We can use this custom ID label in our Rmd document like this: 'as discussed in Chapter `\@ref(ref-labels)`', which will print as 'as discussed in Chapter \@ref(ref-labels)'. If you need to show custom text instead of the chapter number, you use this syntax in your Rmd document: `see [my chapter about labels](#ref-labels) for more details` which will appear as 'see [my chapter about labels](#ref-labels) for more details'
+
+To cross-reference a specific section in the same chapter, we recommend adding a custom ID label to the section header, and using that to cross-reference. For example, earlier in this chapter we have a section on tables and in the Rmd file we see `## Tables {#tables}`. We can cross-reference that in the text like this 'as discussed in the section on `[tables](#tables)`' which will appear as 'as discussed in the above section on [tables](#tables)'
+
+To cross-reference a section in a different chapter we can use the ID label from that section directly. For example, we can write in our Rmd document `as discussed in the section on [R code chunks](#r-chunks) in Chapter \@ref(rmd-basics)` which will appear as 'as discussed in the section on [R code chunks](#r-chunks) in Chapter \@ref(rmd-basics)'. 
+
+If you prefer to cross-reference by the section number, we can use custom ID labels in our Rmd document. For example, to refer to a section in our first chapter, we can write in the Rmd document: `as discussed in section \@ref(r-chunks) in Chapter \@ref(rmd-basics)`. This will appear with section and chapter numbers like so: as 'as discussed in section \@ref(r-chunks) in Chapter \@ref(rmd-basics)'. 
 
 ## Bibliographies
 
