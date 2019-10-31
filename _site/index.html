@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>UC thesis template</title>
+  <title>Thesisdown for the University of Canberra</title>
 
   <meta name="author" content="Anthony Davidson" />
   <meta name="description" content="A template for reproducible thesis publications">
@@ -40,34 +40,30 @@
     
   
   
-    
-      <link rel="stylesheet" href="/ucdown/css/index.css" />
-    
-  
 
   
 
   <!-- Facebook OpenGraph tags -->
   
-  <meta property="og:title" content="UC thesis template" />
+  <meta property="og:title" content="Thesisdown for the University of Canberra" />
   
   
   <meta property="og:type" content="website" />
   
   
-  <meta property="og:url" content="http://www.ssnhub.com/" />
+  <meta property="og:url" content="http://localhost:4000/" />
   
   
   
-  <meta property="og:image" content="http://www.ssnhub.com" />
+  <meta property="og:image" content="http://localhost:4000" />
     
   
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@davan690" />
   <meta name="twitter:creator" content="@davan690" />
-  <meta name="twitter:title" content="UC thesis template" />
-  <meta name="twitter:description" content="Surf Washington uni USNW Follow these steps to get the project running... # ucdown A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from `huskydown` and `thesisdown`. I have wrapped a simple jekyll website around the project to..." />
+  <meta name="twitter:title" content="Thesisdown for the University of Canberra" />
+  <meta name="twitter:description" content="Follow these steps to get the project running... ## ucdown A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from `huskydown` and `thesisdown`. I have wrapped a simple jekyll website around the project to help visualise and communicate..." />
     
 </head>
 
@@ -87,7 +83,7 @@
         <span class="icon-bar"></span>
       </button>
       
-        <a class="navbar-brand" href="http://www.ssnhub.com">UC thesis template</a>
+        <a class="navbar-brand" href="http://localhost:4000">UC thesis template</a>
       
     </div>
 
@@ -138,175 +134,172 @@
 </nav>
 
 
-    <!-- TODO this file has become a mess, refactor it -->
+     <div class="banner" style="padding:5px; text-align:center;">
+  <div class="banner-content">
+    <p>This webpage has resources and information  for writing your phd in uc-down</p>
+ </div>
+</div>
 
 
-<div class="intro-header"></div>
-
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="list-filters">
-  <a href="https://www.github.com/davan690/ucdown" class="list-filter">Surf</a>
-  <a href="https://github.com/benmarwick/huskydown" class="list-filter">Washington uni</a>
+<div class="list-filters">
+  <a href="https://www.github.com/davan690/ucdown" class="list-filter">University of Canberra</a>
+  <a href="https://github.com/benmarwick/huskydown" class="list-filter">Washington University</a>
   <a href="https://github.com/rensa/unswthesisdown" class="list-filter">USNW</a>
 </div>
 
-Follow these steps to get the project running...
+<div role="main" class="container">
+    <p>Follow these steps to get the project running…</p>
 
-# ucdown
+<h2 id="ucdown">ucdown</h2>
 
-A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from `huskydown` and `thesisdown`.
+<p>A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from <code class="highlighter-rouge">huskydown</code> and <code class="highlighter-rouge">thesisdown</code>.</p>
 
-I have wrapped a simple jekyll website around the project to help visualise and communicate the power of this repository and the tools.
+<p>I have wrapped a simple jekyll website around the project to help visualise and communicate the power of this repository and the tools.</p>
 
-This project provides a template for writing a PhD thesis in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the University of Washington](https://grad.uw.edu/for-students-and-post-docs/degree-requirements/thesisdissertation/final-submission-of-your-thesisdissertation/). **I am modify this as we speak to match the university of canberra's guidelines**.
+<p>This project provides a template for writing a PhD thesis in R Markdown, and rendering those files into a PDF formatted according to <a href="https://grad.uw.edu/for-students-and-post-docs/degree-requirements/thesisdissertation/final-submission-of-your-thesisdissertation/">the requirements of the University of Washington</a>. <strong>I am modify this as we speak to match the university of canberra’s guidelines</strong>.</p>
 
-It uses the [University of Washington Thesis class](http://staff.washington.edu/fox/tex/) to convert R Markdown files into a PDF formatted ready for submission at UW. This project was inspired by the [thesisdown](https://github.com/ismayc/thesisdown) and [bookdown](https://github.com/rstudio/bookdown) packages.
+<p>It uses the <a href="http://staff.washington.edu/fox/tex/">University of Washington Thesis class</a> to convert R Markdown files into a PDF formatted ready for submission at UW. This project was inspired by the <a href="https://github.com/ismayc/thesisdown">thesisdown</a> and <a href="https://github.com/rstudio/bookdown">bookdown</a> packages.</p>
 
-Currently, the PDF and gitbook versions are fully-functional, and are the focus of this package. 
+<p>Currently, the PDF and gitbook versions are fully-functional, and are the focus of this package.</p>
 
-**ANTHONY:** *I have a keen interest in developing these as I need them to be able to work in this flow for eclolghy where everyone is still stuck in word and track-changes.*
+<p><strong>ANTHONY:</strong> <em>I have a keen interest in developing these as I need them to be able to work in this flow for eclolghy where everyone is still stuck in word and track-changes.</em></p>
 
-The word and epub versions are in development, have no templates behind them, and are essentially calls to the appropriate functions in bookdown.
+<p>The word and epub versions are in development, have no templates behind them, and are essentially calls to the appropriate functions in bookdown.</p>
 
-If you are new to working with `bookdown` and `rmarkdown`, please read over the documentation available in huskydown PDF template (which you can create by following the simple instructions below) and the [bookdown book](https://bookdown.org/yihui/bookdown/).
+<p>If you are new to working with <code class="highlighter-rouge">bookdown</code> and <code class="highlighter-rouge">rmarkdown</code>, please read over the documentation available in huskydown PDF template (which you can create by following the simple instructions below) and the <a href="https://bookdown.org/yihui/bookdown/">bookdown book</a>.</p>
 
-Under the hood, the [University of Washington Thesis LaTeX template](https://github.com/UWIT-IAM/UWThesis) is used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight [markdown](http://rmarkdown.rstudio.com/authoring_basics.html) syntax, and **R** code and its output can be seamlessly included using [rmarkdown](http://rmarkdown.rstudio.com).
+<p>Under the hood, the <a href="https://github.com/UWIT-IAM/UWThesis">University of Washington Thesis LaTeX template</a> is used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight <a href="http://rmarkdown.rstudio.com/authoring_basics.html">markdown</a> syntax, and <strong>R</strong> code and its output can be seamlessly included using <a href="http://rmarkdown.rstudio.com">rmarkdown</a>.</p>
 
-## Using huskydown to write your PhD thesis
+<h2 id="using-huskydown-to-write-your-phd-thesis">Using huskydown to write your PhD thesis</h2>
 
-### Initial setup
+<h3 id="initial-setup">Initial setup</h3>
 
-Using **huskydown** has some prerequisites, such as Pandoc, LaTeX and some fonts. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of  [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. 
+<p>Using <strong>huskydown</strong> has some prerequisites, such as Pandoc, LaTeX and some fonts. To compile PDF documents using <strong>R</strong>, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of  <a href="http://www.rstudio.com/products/rstudio/download/">RStudio</a>, then you already have Pandoc and don’t need to do anything more about that.</p>
 
-Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package:
+<p>Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the <a href="https://yihui.name/tinytex/"><code class="highlighter-rouge">tinytex</code></a> package:</p>
 
-```
-install.packages(c('tinytex', 'rmarkdown'))
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>install.packages(c('tinytex', 'rmarkdown'))
 tinytex::install_tinytex()
 # after restarting RStudio, confirm that you have LaTeX with 
 tinytex:::is_tinytex()
-```
+</code></pre></div></div>
 
-Our PDF template requires some specific fonts, [EB Garamond](https://github.com/georgd/EB-Garamond), [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/) and [Lato](http://www.latofonts.com/lato-free-fonts/). These are included in this repository. You need to install these before proceeding, either by using your usual method of installing fonts, or following these instructions:
+<p>Our PDF template requires some specific fonts, <a href="https://github.com/georgd/EB-Garamond">EB Garamond</a>, <a href="https://github.com/adobe-fonts/source-code-pro/">Source Code Pro</a> and <a href="http://www.latofonts.com/lato-free-fonts/">Lato</a>. These are included in this repository. You need to install these before proceeding, either by using your usual method of installing fonts, or following these instructions:</p>
 
-On a Linux system here's the simplest way to install the fonts:
+<p>On a Linux system here’s the simplest way to install the fonts:</p>
 
-```
-git clone https://github.com/benmarwick/huskydown
-cd huskydown && unzip inst/fonts.zip
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/benmarwick/huskydown
+cd huskydown &amp;&amp; unzip inst/fonts.zip
 cp inst/fonts -r ~/usr/local/share/fonts
 sudo fc-cache -f -v
-```
+</code></pre></div></div>
 
-On an OSX system you can download a copy of the fonts in this repository with <https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip>, unzip and move them to your fonts directory, or, assuming [homebrew](https://brew.sh/) is installed and updated, this will get you the fonts needed for this template:
+<p>On an OSX system you can download a copy of the fonts in this repository with <a href="https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip">https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory, or, assuming <a href="https://brew.sh/">homebrew</a> is installed and updated, this will get you the fonts needed for this template:</p>
 
-```
-brew update
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
 brew tap caskroom/fonts
 brew cask install font-eb-garamond font-source-code-pro font-lato
-```
+</code></pre></div></div>
 
-On Windows the usual pointing and clicking is required to install the fonts listed above. You can download a copy of the fonts in this repository at <https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip>, unzip and move them to your fonts directory. 
+<p>On Windows the usual pointing and clicking is required to install the fonts listed above. You can download a copy of the fonts in this repository at <a href="https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip">https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory.</p>
 
-### Starting to write your thesis
+<h3 id="starting-to-write-your-thesis">Starting to write your thesis</h3>
 
-To use **huskydown** from [RStudio](http://www.rstudio.com/products/rstudio/download/):
+<p>To use <strong>huskydown</strong> from <a href="http://www.rstudio.com/products/rstudio/download/">RStudio</a>:</p>
 
-1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use huskydown without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your thesis. 
+<p>1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of <a href="http://www.rstudio.com/products/rstudio/download/">RStudio</a>. You can use huskydown without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a>). But RStudio is probably the easiest tool for writing both R code and text in your thesis.</p>
 
-2) Install the **bookdown** and **huskydown** packages: 
+<p>2) Install the <strong>bookdown</strong> and <strong>huskydown</strong> packages:</p>
 
-```
-if (!require("devtools")) install.packages("devtools", repos = "http://cran.rstudio.org")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (!require("devtools")) install.packages("devtools", repos = "http://cran.rstudio.org")
 devtools::install_github("rstudio/bookdown")
 devtools::install_github("benmarwick/huskydown")
-```
+</code></pre></div></div>
 
-3) Use the **New R Markdown** dialog to select **Thesis**, here are the steps, and a screenshot below:
+<p>3) Use the <strong>New R Markdown</strong> dialog to select <strong>Thesis</strong>, here are the steps, and a screenshot below:</p>
 
-File -> New File -> R Markdown... then choose 'From template', then choose 'UW-Thesis, and enter `index` as the **Name**. Note that this will currently only **Knit** if you name the directory `index` at this step. 
+<p>File -&gt; New File -&gt; R Markdown… then choose ‘From template’, then choose ‘UW-Thesis, and enter <code class="highlighter-rouge">index</code> as the <strong>Name</strong>. Note that this will currently only <strong>Knit</strong> if you name the directory <code class="highlighter-rouge">index</code> at this step.</p>
 
-![](uw_thesis_rmd.png)
+<p><img src="/ucdown/uw_thesis_rmd.png" alt="" /></p>
 
-Or if you're not using RStudio, run this line in your R console to create a new PhD thesis from the template:
+<p>Or if you’re not using RStudio, run this line in your R console to create a new PhD thesis from the template:</p>
 
-```r
-rmarkdown::draft('index.Rmd', template = 'thesis', package = 'huskydown', create_dir = TRUE)
-```
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rmarkdown</span><span class="o">::</span><span class="n">draft</span><span class="p">(</span><span class="s1">'index.Rmd'</span><span class="p">,</span><span class="w"> </span><span class="n">template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'thesis'</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'huskydown'</span><span class="p">,</span><span class="w"> </span><span class="n">create_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
-### Day-to-day writing of your thesis 
+<h3 id="day-to-day-writing-of-your-thesis">Day-to-day writing of your thesis</h3>
 
-You need to edit the individual chapter R Markdown files to write your thesis. 
+<p>You need to edit the individual chapter R Markdown files to write your thesis.</p>
 
-You can write in the Rmd files without RStudio (in fact RStudio lacks some conveniences for writing, such as live spell-checking and live word count). So you may prefer to do some writing and editing your Rmd files in your favourite text editor. I frequently use [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/), and [Emacs](https://www.gnu.org/software/emacs/). But I come back to RStudio to create the PDF and work on the R code in my documents. 
+<p>You can write in the Rmd files without RStudio (in fact RStudio lacks some conveniences for writing, such as live spell-checking and live word count). So you may prefer to do some writing and editing your Rmd files in your favourite text editor. I frequently use <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a>, and <a href="https://www.gnu.org/software/emacs/">Emacs</a>. But I come back to RStudio to create the PDF and work on the R code in my documents.</p>
 
-While writing, you should `git commit` your work frequently, after every major activity on your thesis. For example, every few paragraphs or section of text, and after major step of analysis development. You should `git push` at the end of each work session before you leave your computer or change task. For gentle novice-friendly guide to getting starting with using Git with R and RStudio, see <http://happygitwithr.com/>.
+<p>While writing, you should <code class="highlighter-rouge">git commit</code> your work frequently, after every major activity on your thesis. For example, every few paragraphs or section of text, and after major step of analysis development. You should <code class="highlighter-rouge">git push</code> at the end of each work session before you leave your computer or change task. For gentle novice-friendly guide to getting starting with using Git with R and RStudio, see <a href="http://happygitwithr.com/">http://happygitwithr.com/</a>.</p>
 
-## Rendering
+<h2 id="rendering">Rendering</h2>
 
-To render your thesis into a PDF, open `index.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF, gitbook and Word , look at the `output:` field in `index.Rmd`and comment-out the formats you don't want.
+<p>To render your thesis into a PDF, open <code class="highlighter-rouge">index.Rmd</code> in RStudio and then click the “knit” button. To change the output formats between PDF, gitbook and Word , look at the <code class="highlighter-rouge">output:</code> field in <code class="highlighter-rouge">index.Rmd</code>and comment-out the formats you don’t want.</p>
 
-Alternatively, if you're not using RStudio, you can use this from the R console, assuming your have set the `'index/` directory as your working directory:
+<p>Alternatively, if you’re not using RStudio, you can use this from the R console, assuming your have set the <code class="highlighter-rouge">'index/</code> directory as your working directory:</p>
 
-```r
-bookdown::render_book('index.Rmd', huskydown::thesis_pdf(latex_engine = 'xelatex'))
-```
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bookdown</span><span class="o">::</span><span class="n">render_book</span><span class="p">(</span><span class="s1">'index.Rmd'</span><span class="p">,</span><span class="w"> </span><span class="n">huskydown</span><span class="o">::</span><span class="n">thesis_pdf</span><span class="p">(</span><span class="n">latex_engine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'xelatex'</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
 
-The PDF file of your thesis will be deposited in the `_book/` directory.
+<p>The PDF file of your thesis will be deposited in the <code class="highlighter-rouge">_book/</code> directory.</p>
 
-## Components
+<h2 id="components">Components</h2>
 
-The following components are ones you should edit to customize your thesis:
+<p>The following components are ones you should edit to customize your thesis:</p>
 
-### `_bookdown.yml`
+<h3 id="_bookdownyml"><code class="highlighter-rouge">_bookdown.yml</code></h3>
 
-This is the main configuration file for your thesis. It determines what Rmd files are included in the output, and in what order. Arrange the order of your chapters in this file and ensure that the names match the names in your folders. 
+<p>This is the main configuration file for your thesis. It determines what Rmd files are included in the output, and in what order. Arrange the order of your chapters in this file and ensure that the names match the names in your folders.</p>
 
-### `index.Rmd`
+<h3 id="indexrmd"><code class="highlighter-rouge">index.Rmd</code></h3>
 
-This file contains all the meta information that goes at the beginning of your
-document. You'll need to edit this to put your name on the first page, the title of your thesis, etc.
+<p>This file contains all the meta information that goes at the beginning of your
+document. You’ll need to edit this to put your name on the first page, the title of your thesis, etc.</p>
 
-### `01-chap1.Rmd`, `02-chap2.Rmd`, etc.
+<h3 id="01-chap1rmd-02-chap2rmd-etc"><code class="highlighter-rouge">01-chap1.Rmd</code>, <code class="highlighter-rouge">02-chap2.Rmd</code>, etc.</h3>
 
-These are the Rmd files for each chapter in your dissertation. Write your thesis in these. If you're writing in RStudio, you may find the [wordcount addin](https://github.com/benmarwick/wordcountaddin) useful for getting word counts and readability statistics in R markdown documents. You might also enjoy writing in these Rmd files with [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), and [Emacs](https://www.gnu.org/software/emacs/). 
+<p>These are the Rmd files for each chapter in your dissertation. Write your thesis in these. If you’re writing in RStudio, you may find the <a href="https://github.com/benmarwick/wordcountaddin">wordcount addin</a> useful for getting word counts and readability statistics in R markdown documents. You might also enjoy writing in these Rmd files with <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, and <a href="https://www.gnu.org/software/emacs/">Emacs</a>.</p>
 
-### `bib/`
+<h3 id="bib"><code class="highlighter-rouge">bib/</code></h3>
 
-Store your bibliography (as bibtex files) here. We recommend using the [citr addin](https://github.com/crsh/citr) and [Zotero](https://www.zotero.org/) to efficiently manage and insert citations. 
+<p>Store your bibliography (as bibtex files) here. We recommend using the <a href="https://github.com/crsh/citr">citr addin</a> and <a href="https://www.zotero.org/">Zotero</a> to efficiently manage and insert citations.</p>
 
-### `csl/`
+<h3 id="csl"><code class="highlighter-rouge">csl/</code></h3>
 
-Specific style files for bibliographies should be stored here. A good source for
-citation styles is https://github.com/citation-style-language/styles#readme
+<p>Specific style files for bibliographies should be stored here. A good source for
+citation styles is https://github.com/citation-style-language/styles#readme</p>
 
-### `figure/` and `data/`
+<h3 id="figure-and-data"><code class="highlighter-rouge">figure/</code> and <code class="highlighter-rouge">data/</code></h3>
 
-Store your figures and data here and reference them in your R Markdown files. See the [bookdown book](https://bookdown.org/yihui/bookdown/) for details on cross-referencing items using R Markdown.
+<p>Store your figures and data here and reference them in your R Markdown files. See the <a href="https://bookdown.org/yihui/bookdown/">bookdown book</a> for details on cross-referencing items using R Markdown.</p>
 
-## Related projects
+<h2 id="related-projects">Related projects</h2>
 
-This project has drawn directly on code and ideas in the following:
+<p>This project has drawn directly on code and ideas in the following:</p>
 
-- https://github.com/UWIT-IAM/UWThesis    
-- https://github.com/stevenpollack/ucbthesis  
-- https://github.com/suchow/Dissertate    
-- https://github.com/SeungkiKwak/Kwak_S_PhD_thesis    
-- https://github.com/dhalperi/uwthesis-tweaked     
+<ul>
+  <li>https://github.com/UWIT-IAM/UWThesis</li>
+  <li>https://github.com/stevenpollack/ucbthesis</li>
+  <li>https://github.com/suchow/Dissertate</li>
+  <li>https://github.com/SeungkiKwak/Kwak_S_PhD_thesis</li>
+  <li>https://github.com/dhalperi/uwthesis-tweaked</li>
+</ul>
 
-Other relevant projects:
+<p>Other relevant projects:</p>
 
-- Ed Berry's blog post ['Writing your thesis with bookdown'](https://eddjberry.netlify.com/post/writing-your-thesis-with-bookdown/), Posted on September 25, 2017    
-- Rosanna van Hespen's ([@rosannavhespen](https://twitter.com/rosannavhespen?lang=en)) five blog posts on ['Writing your thesis with R Markdown'](https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/)
-- [thesisdowndss](https://github.com/mine-cetinkaya-rundel/thesisdowndss) by Mine Cetinkaya-Rundel at Duke University    
-- [beaverdown](https://github.com/zkamvar/beaverdown) by Zhian Kamvar at Oregon State University
+<ul>
+  <li>Ed Berry’s blog post <a href="https://eddjberry.netlify.com/post/writing-your-thesis-with-bookdown/">‘Writing your thesis with bookdown’</a>, Posted on September 25, 2017</li>
+  <li>Rosanna van Hespen’s (<a href="https://twitter.com/rosannavhespen?lang=en">@rosannavhespen</a>) five blog posts on <a href="https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/">‘Writing your thesis with R Markdown’</a></li>
+  <li><a href="https://github.com/mine-cetinkaya-rundel/thesisdowndss">thesisdowndss</a> by Mine Cetinkaya-Rundel at Duke University</li>
+  <li><a href="https://github.com/zkamvar/beaverdown">beaverdown</a> by Zhian Kamvar at Oregon State University</li>
+</ul>
 
-## Contributing
+<h2 id="contributing">Contributing</h2>
 
-If you would like to contribute to this project, please start by reading our [Guide to Contributing](CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+<p>If you would like to contribute to this project, please start by reading our <a href="/ucdown/CONTRIBUTING.md">Guide to Contributing</a>. Please note that this project is released with a <a href="/ucdown/CONDUCT/">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 
 <!--
 To update the PDF template stored in inst/ assuming we are at top level:
@@ -318,12 +311,8 @@ setwd('index')
 bookdown::render_book('index.Rmd', huskydown::thesis_pdf(latex_engine = 'xelatex'))
 
 -->
-	    
-    </div>
+
   </div>
-</div>
-
-
 
     <footer>
   <div class="container beautiful-jekyll-footer">
@@ -337,7 +326,7 @@ bookdown::render_book('index.Rmd', huskydown::thesis_pdf(latex_engine = 'xelatex
 
       
       &nbsp;&bull;&nbsp;
-      <a href="http://www.ssnhub.com">ssnhub.com</a>
+      <a href="http://localhost:4000">ssnhub.com</a>
       
 
       
