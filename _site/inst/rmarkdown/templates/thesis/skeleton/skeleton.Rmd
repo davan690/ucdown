@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>My thesis title - edit in index.Rmd</title>
+
+  <meta name="author" content="Anthony Davidson" />
+  <meta name="description" content="A template for reproducible thesis publications">
+
+  <link rel="alternate" type="application/rss+xml" title="UC thesis template - A template for reproducible thesis publications" href="/ucdown/feed.xml" />
+  
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    
+      
+  
+  
+    
+      <link rel="stylesheet" href="/ucdown/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/ucdown/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/ucdown/css/main.css" />
+    
+    
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+    
+  
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+  <meta property="og:title" content="My thesis title - edit in index.Rmd" />
+  
+  
+  <meta property="og:type" content="website" />
+  
+  
+  <meta property="og:url" content="http://www.ssnhub.com/inst/rmarkdown/templates/thesis/skeleton/skeleton.Rmd" />
+  
+  
+  
+  <meta property="og:image" content="http://www.ssnhub.com" />
+    
+  
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@davan690" />
+  <meta name="twitter:creator" content="@davan690" />
+  <meta name="twitter:title" content="My thesis title - edit in index.Rmd" />
+  <meta name="twitter:description" content="```{r include_packages, include = FALSE} # This chunk ensures that the huskydown package is # installed and loaded. This huskydown package includes # the template files for the thesis. if(!require(devtools)) install.packages(&quot;devtools&quot;, repos = &quot;http://cran.rstudio.com&quot;) if(!require(huskydown)) devtools::install_github(&quot;benmarwick/huskydown&quot;) library(huskydown) ``` # Introduction {.unnumbered} Welcome to the _R Markdown_ thesis template. This template..." />
+    
+</head>
+
+  
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://www.ssnhub.com">UC thesis template</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/ucdown/">Home</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://www.github.com/davan690/ucdown">Repository</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>My thesis title - edit in index.Rmd</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <!--
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
+
+If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
+-->
+
+<!--
+If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
+-->
+
+```{r include_packages, include = FALSE}
+# This chunk ensures that the huskydown package is
+# installed and loaded. This huskydown package includes
+# the template files for the thesis.
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(huskydown))
+  devtools::install_github("benmarwick/huskydown")
+library(huskydown)
+```
+
+<!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers on chapters. -->
+
+# Introduction {.unnumbered}
+
+Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the UW LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well. The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+
+Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be at least twice as large and complex as anything you've written before, taxing Word's capabilities. After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
+
+<!--  If you're still on the fence about using _R Markdown_, check out the resource for newbies available at <https://ismayc.github.io/rbasics-book/> .  -->
+
+**Why use it?**
+
+_R Markdown_ creates a simple and straightforward way to interface with the beauty of LaTeX.  Packages have been written in **R** to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, _R Markdown_ also allows you to read in your data, to analyze it and to visualize it using **R** functions, and also to provide the documentation and commentary on the results of your project.  Further, it allows for **R** results to be passed inline to the commentary of your results.  You'll see more on this later.  
+
+<!--  Having your code and commentary all together in one place has a plethora of benefits! -->
+
+**Who should use it?**
+
+Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
+
+	    
+    </div>
+  </div>
+</div>
+
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"></ul>
+      <p class="copyright text-muted">
+      Anthony Davidson
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://www.ssnhub.com">ssnhub.com</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/ucdown/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/ucdown/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/ucdown/js/main.js"></script>
+    
+  
+
+
+<a href="https://paypal.me/ARDavidson?locale.x=en_AU"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="Donate" /></a>
+    <script>
+    $( document ).ready(function() {
+        $('a').each( function() {
+            if ($(this).text().match("^\\[") && $(this).text().match("\\]$")) {
+                $(this).addClass('btn').addClass('btn-primary');
+                $(this).text($(this).text().substring(1, $(this).text().length-1));
+            }
+        });
+    });
+</script>
+
+  </body>
+<script>
+  (function() {
+    var cx = '010061006416176013100:a0xb_zzxe0q';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+</html>
