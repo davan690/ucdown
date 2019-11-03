@@ -17,7 +17,7 @@ dir.create(testing_path, showWarnings = FALSE)
 
 context("check that the pkg template files are present")
 
-template_files <- list.files(system.file('rmarkdown', package='huskydown'), recursive = TRUE)
+template_files <- list.files(system.file('rmarkdown', package='ucdown'), recursive = TRUE)
 
 test_that("Template files are present", {
   expect_true(length(template_files) == 19)
@@ -31,7 +31,7 @@ suppressMessages(rmarkdown::draft('index.Rmd',
                                   system.file("rmarkdown",
                                               "templates",
                                               "thesis",
-                                              package = "huskydown"),
+                                              package = "ucdown"),
                                   create_dir = TRUE,
                                   edit = FALSE))
 
@@ -57,7 +57,7 @@ context("render into a PDF")
 
 if (getwd() != file.path(testing_path, 'index')) setwd(file.path(testing_path, 'index'))
 bookdown::render_book('index.Rmd',
-                      huskydown::thesis_pdf(latex_engine = 'xelatex'),
+                      ucdown::thesis_pdf(latex_engine = 'xelatex'),
                       envir = globalenv())
 
 test_that("bookdown::render_book generates the PDF of the thesis", {

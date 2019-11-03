@@ -1,12 +1,12 @@
 
-# huskydown 0.0.4
+# ucdown 0.0.4
 
 - new version of Pandoc
 - Source-Code-Pro changed location on GitHub, so changed method of getting them
 - tinytex burst onto the scene, simplying LaTeX installs.
 
 
-# huskydown 0.0.4
+# ucdown 0.0.4
 
 - CI on OSX and Linux, collect artefacts and issue PDF
 - use this to ensure the builds succeed and we get artefacts:
@@ -17,15 +17,15 @@ git push origin --tags
 - do check the GITHUB_TOKEN on Travis-CI since I regenerate this often
 
 
-# huskydown 0.0.3
+# ucdown 0.0.3
 
 - Add example output files
 
-# huskydown 0.0.2
+# ucdown 0.0.2
 
 - Add continuous integration via Docker container
 
-# huskydown 0.0.1
+# ucdown 0.0.1
 
 - Replaced Reed College templates with UW templates, tested and debugged.
 - PDF version working for UW template

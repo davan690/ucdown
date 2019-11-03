@@ -1,4 +1,4 @@
 library(testthat)
-library(huskydown)
+library(ucdown)
 
-test_check("huskydown")
+test_check("ucdown")

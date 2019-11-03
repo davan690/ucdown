@@ -6,18 +6,18 @@ title: Thesisdown for the University of Canberra
 <title>Thesisdown for the University of Canberra</title>
 <p>Follow these steps to get the project running...</p>
 <h2>ucdown</h2>
-<p>A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from <code>huskydown</code> and <code>thesisdown</code>.</p>
+<p>A template following some of the leading universities around the world to produce a reproducible thesis. Here are the instructions modified from <code>ucdown</code> and <code>thesisdown</code>.</p>
 <p>I have wrapped a simple jekyll website around the project to help visualise and communicate the power of this repository and the tools.</p>
 <p>This project provides a template for writing a PhD thesis in R Markdown, and rendering those files into a PDF formatted according to <a href='https://grad.uw.edu/for-students-and-post-docs/degree-requirements/thesisdissertation/final-submission-of-your-thesisdissertation/'>the requirements of the University of Washington</a>. <strong>I am modify this as we speak to match the university of canberra&#39;s guidelines</strong>.</p>
 <p>It uses the <a href='http://staff.washington.edu/fox/tex/'>University of Washington Thesis class</a> to convert R Markdown files into a PDF formatted ready for submission at UW. This project was inspired by the <a href='https://github.com/ismayc/thesisdown'>thesisdown</a> and <a href='https://github.com/rstudio/bookdown'>bookdown</a> packages.</p>
 <p>Currently, the PDF and gitbook versions are fully-functional, and are the focus of this package. </p>
 <p><strong>ANTHONY:</strong> <em>I have a keen interest in developing these as I need them to be able to work in this flow for eclolghy where everyone is still stuck in word and track-changes.</em></p>
 <p>The word and epub versions are in development, have no templates behind them, and are essentially calls to the appropriate functions in bookdown.</p>
-<p>If you are new to working with <code>bookdown</code> and <code>rmarkdown</code>, please read over the documentation available in huskydown PDF template (which you can create by following the simple instructions below) and the <a href='https://bookdown.org/yihui/bookdown/'>bookdown book</a>.</p>
+<p>If you are new to working with <code>bookdown</code> and <code>rmarkdown</code>, please read over the documentation available in ucdown PDF template (which you can create by following the simple instructions below) and the <a href='https://bookdown.org/yihui/bookdown/'>bookdown book</a>.</p>
 <p>Under the hood, the <a href='https://github.com/UWIT-IAM/UWThesis'>University of Washington Thesis LaTeX template</a> is used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight <a href='http://rmarkdown.rstudio.com/authoring_basics.html'>markdown</a> syntax, and <strong>R</strong> code and its output can be seamlessly included using <a href='http://rmarkdown.rstudio.com'>rmarkdown</a>.</p>
-<h2>Using huskydown to write your PhD thesis</h2>
+<h2>Using ucdown to write your PhD thesis</h2>
 <h3>Initial setup</h3>
-<p>Using <strong>huskydown</strong> has some prerequisites, such as Pandoc, LaTeX and some fonts. To compile PDF documents using <strong>R</strong>, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of  <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>, then you already have Pandoc and don&#39;t need to do anything more about that. </p>
+<p>Using <strong>ucdown</strong> has some prerequisites, such as Pandoc, LaTeX and some fonts. To compile PDF documents using <strong>R</strong>, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of  <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>, then you already have Pandoc and don&#39;t need to do anything more about that. </p>
 <p>Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the <a href='https://yihui.name/tinytex/'><code>tinytex</code></a> package:</p>
 <pre><code>install.packages(c(&#39;tinytex&#39;, &#39;rmarkdown&#39;))
 tinytex::install_tinytex()
@@ -26,30 +26,30 @@ tinytex:::is_tinytex()
 </code></pre>
 <p>Our PDF template requires some specific fonts, <a href='https://github.com/georgd/EB-Garamond'>EB Garamond</a>, <a href='https://github.com/adobe-fonts/source-code-pro/'>Source Code Pro</a> and <a href='http://www.latofonts.com/lato-free-fonts/'>Lato</a>. These are included in this repository. You need to install these before proceeding, either by using your usual method of installing fonts, or following these instructions:</p>
 <p>On a Linux system here&#39;s the simplest way to install the fonts:</p>
-<pre><code>git clone https://github.com/benmarwick/huskydown
-cd huskydown &amp;&amp; unzip inst/fonts.zip
+<pre><code>git clone https://github.com/benmarwick/ucdown
+cd ucdown &amp;&amp; unzip inst/fonts.zip
 cp inst/fonts -r ~/usr/local/share/fonts
 sudo fc-cache -f -v
 </code></pre>
-<p>On an OSX system you can download a copy of the fonts in this repository with <a href='https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip' target='_blank' class='url'>https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory, or, assuming <a href='https://brew.sh/'>homebrew</a> is installed and updated, this will get you the fonts needed for this template:</p>
+<p>On an OSX system you can download a copy of the fonts in this repository with <a href='https://github.com/benmarwick/ucdown/raw/master/inst/fonts.zip' target='_blank' class='url'>https://github.com/benmarwick/ucdown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory, or, assuming <a href='https://brew.sh/'>homebrew</a> is installed and updated, this will get you the fonts needed for this template:</p>
 <pre><code>brew update
 brew tap caskroom/fonts
 brew cask install font-eb-garamond font-source-code-pro font-lato
 </code></pre>
-<p>On Windows the usual pointing and clicking is required to install the fonts listed above. You can download a copy of the fonts in this repository at <a href='https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip' target='_blank' class='url'>https://github.com/benmarwick/huskydown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory. </p>
+<p>On Windows the usual pointing and clicking is required to install the fonts listed above. You can download a copy of the fonts in this repository at <a href='https://github.com/benmarwick/ucdown/raw/master/inst/fonts.zip' target='_blank' class='url'>https://github.com/benmarwick/ucdown/raw/master/inst/fonts.zip</a>, unzip and move them to your fonts directory. </p>
 <h3>Starting to write your thesis</h3>
-<p>To use <strong>huskydown</strong> from <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>:</p>
-<p>1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>. You can use huskydown without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. <a href='https://atom.io/'>Atom</a>, <a href='https://notepad-plus-plus.org/'>Notepad++</a>). But RStudio is probably the easiest tool for writing both R code and text in your thesis. </p>
-<p>2) Install the <strong>bookdown</strong> and <strong>huskydown</strong> packages: </p>
+<p>To use <strong>ucdown</strong> from <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>:</p>
+<p>1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of <a href='http://www.rstudio.com/products/rstudio/download/'>RStudio</a>. You can use ucdown without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. <a href='https://atom.io/'>Atom</a>, <a href='https://notepad-plus-plus.org/'>Notepad++</a>). But RStudio is probably the easiest tool for writing both R code and text in your thesis. </p>
+<p>2) Install the <strong>bookdown</strong> and <strong>ucdown</strong> packages: </p>
 <pre><code>if (!require(&quot;devtools&quot;)) install.packages(&quot;devtools&quot;, repos = &quot;http://cran.rstudio.org&quot;)
 devtools::install_github(&quot;rstudio/bookdown&quot;)
-devtools::install_github(&quot;benmarwick/huskydown&quot;)
+devtools::install_github(&quot;benmarwick/ucdown&quot;)
 </code></pre>
 <p>3) Use the <strong>New R Markdown</strong> dialog to select <strong>Thesis</strong>, here are the steps, and a screenshot below:</p>
 <p>File -&gt; New File -&gt; R Markdown... then choose &#39;From template&#39;, then choose &#39;UW-Thesis, and enter <code>index</code> as the <strong>Name</strong>. Note that this will currently only <strong>Knit</strong> if you name the directory <code>index</code> at this step. </p>
 <p><img src="uw_thesis_rmd.png" referrerpolicy="no-referrer"></p>
 <p>Or if you&#39;re not using RStudio, run this line in your R console to create a new PhD thesis from the template:</p>
-<pre><code class='language-r' lang='r'>rmarkdown::draft(&#39;index.Rmd&#39;, template = &#39;thesis&#39;, package = &#39;huskydown&#39;, create_dir = TRUE)
+<pre><code class='language-r' lang='r'>rmarkdown::draft(&#39;index.Rmd&#39;, template = &#39;thesis&#39;, package = &#39;ucdown&#39;, create_dir = TRUE)
 </code></pre>
 <h3>Day-to-day writing of your thesis </h3>
 <p>You need to edit the individual chapter R Markdown files to write your thesis. </p>
@@ -58,7 +58,7 @@ devtools::install_github(&quot;benmarwick/huskydown&quot;)
 <h2>Rendering</h2>
 <p>To render your thesis into a PDF, open <code>index.Rmd</code> in RStudio and then click the &quot;knit&quot; button. To change the output formats between PDF, gitbook and Word , look at the <code>output:</code> field in <code>index.Rmd</code>and comment-out the formats you don&#39;t want.</p>
 <p>Alternatively, if you&#39;re not using RStudio, you can use this from the R console, assuming your have set the <code>&#39;index/</code> directory as your working directory:</p>
-<pre><code class='language-r' lang='r'>bookdown::render_book(&#39;index.Rmd&#39;, huskydown::thesis_pdf(latex_engine = &#39;xelatex&#39;))
+<pre><code class='language-r' lang='r'>bookdown::render_book(&#39;index.Rmd&#39;, ucdown::thesis_pdf(latex_engine = &#39;xelatex&#39;))
 </code></pre>
 <p>The PDF file of your thesis will be deposited in the <code>_book/</code> directory.</p>
 <h2>Components</h2>
@@ -99,9 +99,9 @@ citation styles is <a href='https://github.com/citation-style-language/styles#re
 <p>If you would like to contribute to this project, please start by reading our <a href='CONTRIBUTING.md'>Guide to Contributing</a>. Please note that this project is released with a <a href='CONDUCT.md'>Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 <p>&lt;!--
 To update the PDF template stored in inst/ assuming we are at top level:</p>
-<p>rmarkdown::draft(&#39;index.Rmd&#39;, template = &#39;thesis&#39;, package = &#39;huskydown&#39;, create_dir = TRUE, edit = FALSE)</p>
+<p>rmarkdown::draft(&#39;index.Rmd&#39;, template = &#39;thesis&#39;, package = &#39;ucdown&#39;, create_dir = TRUE, edit = FALSE)</p>
 <p>setwd(&#39;index&#39;)</p>
-<p>bookdown::render_book(&#39;index.Rmd&#39;, huskydown::thesis_pdf(latex_engine = &#39;xelatex&#39;))</p>
+<p>bookdown::render_book(&#39;index.Rmd&#39;, ucdown::thesis_pdf(latex_engine = &#39;xelatex&#39;))</p>
 <p>--&gt;</p>
 </body>
 </html>

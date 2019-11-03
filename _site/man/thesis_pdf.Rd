@@ -25,6 +25,6 @@ to specify using the University of Washington Thesis LaTeX template and cls file
 }
 \examples{
 \dontrun{
- output: huskydown::thesis_pdf
+ output: ucdown::thesis_pdf
 }
 }

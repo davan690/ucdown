@@ -1,4 +1,4 @@
-Package: huskydown
+Package: ucdown
 Title: An R Markdown thesis template for the University of Washington
 Version: 0.0.5
 Authors@R: c(

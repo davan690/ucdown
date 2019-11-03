@@ -1,6 +1,6 @@
 ```{r include_packages_2, include = FALSE}
-# This chunk ensures that the huskydown package is
-# installed and loaded. This huskydown package includes
+# This chunk ensures that the ucdown package is
+# installed and loaded. This ucdown package includes
 # the template files for the thesis and also two functions
 # used for labeling and referencing
 if(!require(devtools))
@@ -11,11 +11,11 @@ if(!require(ggplot2))
     install.packages("ggplot2", repos = "http://cran.rstudio.com")
 if(!require(ggplot2))
     install.packages("bookdown", repos = "http://cran.rstudio.com")
-if(!require(huskydown)){
+if(!require(ucdown)){
   library(devtools)
-  devtools::install_github("benmarwick/huskydown")
+  devtools::install_github("benmarwick/ucdown")
   }
-library(huskydown)
+library(ucdown)
 flights <- read.csv("data/flights.csv")
 ```
 
@@ -115,7 +115,7 @@ You might want to footnote something. ^[footnote text] The footnote will be in a
 
 ## Cross-referencing chapters and sections 
 
-The [bookdown documentation](https://bookdown.org/yihui/bookdown/cross-references.html) is an excellent source for learning how to cross-reference in a bookdown project such as a huskydown document. Here we only cover the most common uses for a typical thesis. If you want something more complex or fancy, please refer to the bookdown documentation and seek help from the developers of that package. 
+The [bookdown documentation](https://bookdown.org/yihui/bookdown/cross-references.html) is an excellent source for learning how to cross-reference in a bookdown project such as a ucdown document. Here we only cover the most common uses for a typical thesis. If you want something more complex or fancy, please refer to the bookdown documentation and seek help from the developers of that package. 
 
 By default, all of your chapter and section headers will get an auto-generated ID label For example, e.g., `# Chapter 1` will have an auto-generated ID `chapter-1`. Note that the ID label is all lower case, and has no spaces. If you have any kind of punctuation in your header, such as a colon (:), it will not appear in the ID label. Then in your text you can reference chapter one in your Rmd file like this: 'as discussed in Chapter `\@ref(chapter-1)`', which will print as 'as discussed in Chapter 1'
 
@@ -151,5 +151,5 @@ If you look at the YAML header at the top of the main .Rmd file you can see that
 
 ## Anything else?
 
-If you'd like to see examples of other things in this template, please [contact us](https://github.com/benmarwick/huskydown/issues/new) (email <bmarwick@uw.edu>) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.
+If you'd like to see examples of other things in this template, please [contact us](https://github.com/benmarwick/ucdown/issues/new) (email <bmarwick@uw.edu>) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.
 
