@@ -1,6 +1,8 @@
- 
+ ---
+ title: ucdown
+ ---
 
-# ucdown <img src="inst/rmarkdown/templates/thesis/skeleton/figure/uw-100px.png" align="right" />
+<img src="inst/rmarkdown/templates/thesis/skeleton/figure/uw-100px.png" align="right" />
 
 [![Travis-CI Build Status](https://travis-ci.org/benmarwick/ucdown.svg?branch=master)](https://travis-ci.org/benmarwick/ucdown) 
 

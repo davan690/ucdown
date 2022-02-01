@@ -1,8 +1,7 @@
 ---
-layout: home
 title: Thesisdown for the University of Canberra
 ---
-
+ 
 Follow these steps to get the project running...
 
 ## ucdown
