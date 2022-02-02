@@ -1,0 +1,10 @@
+book_filename: "thesis"
+chapter_name: "Chapter "
+# download: [
+#     ["thesis.pdf", "PDF"],
+#     ["thesis.epub", "EPUB"],
+#     ["thesis.docx", "Word"]
+#   ]
+delete_merged_file: true
+bibliography: [book.bib, packages.bib, phd-used-references.bib]
+always_allow_html: true

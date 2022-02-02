@@ -1,0 +1,4 @@
+name:  ucThesis
+description: >
+ Template for creating a PhD Thesis at the University of Canberra using R Markdown based on the Reed College LaTeX and Word templates and the R bookdown package.
+

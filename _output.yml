@@ -1,0 +1,43 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">UC PhD introduction</a></li>
+      after: |
+        <li><a href="https://github.com/davan690/phd-thesis" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/davan690/phd-thesis/docs/%s
+    download: ["pdf", "epub", "mobi", "docx"]
+thesisdown::thesis_pdf: default
+  # includes:
+    # in_header: template.tex
+  # latex_engine: xelatex
+  # citation_package: natbib
+  # keep_tex: yes
+bookdown::epub_book: default
+bookdown::word_document2:
+  # reference_docx: template.docx
+  fig_caption: yes
+  toc: yes
+bookdown::html_document2:
+  theme: journal
+  highlight: kate
+  fig_caption: yes
+  toc: yes
+  toc_float: true
+  code_folding: hide
+  df_print: paged
+  number_sections: false
+#output:
+ # word_document: default
+  #pdf_document:
+   # fig_caption: yes
+    #keep_tex: yes
+    #number_sections: yes
+  #html_document:
+   # fig_caption: yes
+  #  highlight: pygments
+  #  number_sections: no
+  #  theme: cerulean
+
+
