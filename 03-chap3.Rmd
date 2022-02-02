@@ -122,7 +122,7 @@ A table linking these carrier codes to airline names is available at <https://gi
 Next, we will explore the use of the `out.extra` chunk option, which can be used to shrink or expand an image loaded from a file by specifying `"scale= "`. Here we use the mathematical graph stored in the "subdivision.pdf" file.
 
 ```{r subd, echo=FALSE, fig.cap="Subdiv. graph", out.extra="scale=0.75"}
-# include_graphics("figure/subdivision.pdf")
+# include_graphics("figure/UC_Logo.png")
 ```
 
 Here is a reference to this image: Figure \@ref(fig:subd).  Note that `echo=FALSE` is specified so that the **R** code is hidden in the document.
@@ -132,7 +132,7 @@ Here is a reference to this image: Figure \@ref(fig:subd).  Note that `echo=FALS
 Lastly, we will explore how to rotate and enlarge figures using the `out.extra` chunk option.  (Currently this only works in the PDF version of the book.)
 
 ```{r subd2, echo=FALSE, out.extra="angle=180, scale=1.1", fig.cap="A Larger Figure, Flipped Upside Down"}
-# include_graphics("figure/subdivision.pdf")
+# include_graphics("figure/logo.png")
 ```
 
 As another example, here is a reference: Figure \@ref(fig:subd2).  

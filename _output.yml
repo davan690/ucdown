@@ -8,26 +8,34 @@ bookdown::gitbook:
         <li><a href="https://github.com/davan690/phd-thesis" target="blank">Published with bookdown</a></li>
     edit: https://github.com/davan690/phd-thesis/docs/%s
     download: ["pdf", "epub", "mobi", "docx"]
-thesisdown::thesis_pdf: default
-  # includes:
-    # in_header: template.tex
+thesisdown::thesis_pdf:
+  includes:
+    in_header: TitlePage.tex
   # latex_engine: xelatex
   # citation_package: natbib
   # keep_tex: yes
-bookdown::epub_book: default
-bookdown::word_document2:
-  # reference_docx: template.docx
-  fig_caption: yes
-  toc: yes
-bookdown::html_document2:
-  theme: journal
-  highlight: kate
-  fig_caption: yes
-  toc: yes
-  toc_float: true
-  code_folding: hide
-  df_print: paged
-  number_sections: false
+# bookdown::epub_book: default
+# bookdown::word_document2:
+#   # reference_docx: template.docx
+#   fig_caption: yes
+#   toc: yes
+# bookdown::html_document2:
+#   theme: journal
+#   highlight: kate
+#   fig_caption: yes
+#   toc: yes
+#   toc_float: true
+#   code_folding: hide
+#   df_print: paged
+#   number_sections: false
+  
+# Remove the hashtag to specify which version of output you would like.
+# Can only choose one at a time.
+# output:
+#   thesisdown::thesis_pdf: default
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
 #output:
  # word_document: default
   #pdf_document:

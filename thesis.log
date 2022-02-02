@@ -1,11 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (./reedthesis.cls
+L3 programming layer <2022-01-21> (./ucthesis.cls
+
+LaTeX Warning: You have requested document class `ucthesis',
+               but the document class provides `reedthesis'.
+
 Document Class: reedthesis 2004/01/27 The Reed College Thesis Class
 (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
@@ -500,51 +504,22 @@ LaTeX Info: Redefining \nameref on input line 217.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 221.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 221.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 221.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 221.
-(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+<figure/UC_Logo.png, id=104, 560.0925pt x 365.365pt>
+File: figure/UC_Logo.png Graphic file (type png)
+<use figure/UC_Logo.png>
+Package pdftex.def Info: figure/UC_Logo.png  used on input line 221.
+(pdftex.def)             Requested size: 216.81pt x 141.43251pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1
 Non-PDF special ignored!
 <special> !% Reed College LaTeX Thesis Class 2001/12/04 SN
 Non-PDF special ignored!
 <special> rawpostscript % Reed College LaTeX Thesis Class 2001/12/04 SN
 
 
-{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figure/UC_Logo.png>] [2
 
 ] [3] [4
 
@@ -558,6 +533,44 @@ Non-PDF special ignored!
 
 
 ] (./thesis.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 1.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+(c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 Underfull \vbox (badness 2318) has occurred while \output is active []
 
 [5])
@@ -584,138 +597,138 @@ Underfull \vbox (badness 2318) has occurred while \output is active []
 ] [13] [14
 
 
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258 \chapter*{Introduction}\label{introduction}}
+                                                   [1]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258 \chapter*{Introduction}\label{introduction}}
+                                                   [2
+
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 
-       [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+l.272 
+       [3]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.273 ...ter{R Markdown Basics}\label{rmd-basics}}
-                                                   [2]
+l.278 ...ter{R Markdown Basics}\label{rmd-basics}}
+                                                   [4]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 275.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 280.
 (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 286.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 291.
 (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.308   I
-         tem 2 [3
+) [5
 
 ]
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.355 \begin{quote}
-                    [4]
-<thesis_files/figure-latex/pressure-1.pdf, id=250, 361.35pt x 216.81pt>
+[6]
+<thesis_files/figure-latex/pressure-1.pdf, id=260, 361.35pt x 216.81pt>
 File: thesis_files/figure-latex/pressure-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/pressure-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/pressure-1.pdf  used on input line 375.
+Package pdftex.def Info: thesis_files/figure-latex/pressure-1.pdf  used on input line 380.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-[5 <./thesis_files/figure-latex/pressure-1.pdf>] [6]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 431.
+[7 <./thesis_files/figure-latex/pressure-1.pdf>] [8]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 436.
 (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 433.
-[7] [8
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 438.
+[9] [10
 
 ]
-<thesis_files/figure-latex/march3plot-1.pdf, id=286, 433.62pt x 216.81pt>
+<thesis_files/figure-latex/march3plot-1.pdf, id=295, 433.62pt x 216.81pt>
 File: thesis_files/figure-latex/march3plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/march3plot-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/march3plot-1.pdf  used on input line 522.
+Package pdftex.def Info: thesis_files/figure-latex/march3plot-1.pdf  used on input line 527.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-Overfull \hbox (17.62376pt too wide) in paragraph at lines 522--523
+Overfull \hbox (17.62376pt too wide) in paragraph at lines 527--528
 [][] 
  []
 
 
 Underfull \vbox (badness 3364) has occurred while \output is active []
 
-[9]
-Underfull \hbox (badness 1603) in paragraph at lines 534--536
+[11]
+Underfull \hbox (badness 1603) in paragraph at lines 539--541
 []\T1/lmr/m/n/12 (+20) Reference Guide - []$\T1/lmtt/m/n/12 https : / / www . rstudio . com / wp -[] content / uploads /
  []
 
-[10 <./thesis_files/figure-latex/march3plot-1.pdf>] [11] [12
+[12 <./thesis_files/figure-latex/march3plot-1.pdf>] [13] [14
 
 ]
 Chapter 2.
 
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 \T1/lmr/m/n/12 (+20) ([]$\T1/lmtt/m/n/12 https : / / mirror . utexas . edu / ctan / info / symbols / comprehensive / symbols -[]
  []
 
-[14]
+[16]
 Chapter 3.
 
-LaTeX Warning: Reference `fig:reedlogo' on page 15 undefined on input line 637.
+LaTeX Warning: Reference `fig:reedlogo' on page 17 undefined on input line 642.
 
-[15
+[17
 
 ]
-<thesis_files/figure-latex/delaysboxplot-1.pdf, id=369, 433.62pt x 361.35pt>
+<thesis_files/figure-latex/delaysboxplot-1.pdf, id=378, 433.62pt x 361.35pt>
 File: thesis_files/figure-latex/delaysboxplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/delaysboxplot-1.pdf>
-Package pdftex.def Info: thesis_files/figure-latex/delaysboxplot-1.pdf  used on input line 653.
+Package pdftex.def Info: thesis_files/figure-latex/delaysboxplot-1.pdf  used on input line 658.
 (pdftex.def)             Requested size: 433.61894pt x 361.34912pt.
-[16
-
- <./thesis_files/figure-latex/delaysboxplot-1.pdf>] [17]
-
-LaTeX Warning: Reference `fig:subd' on page 18 undefined on input line 664.
-
-
-LaTeX Warning: Reference `fig:subd2' on page 18 undefined on input line 670.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 675.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 675.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 675.
 [18
 
-] [19] [20
+ <./thesis_files/figure-latex/delaysboxplot-1.pdf>] [19]
+
+LaTeX Warning: Reference `fig:subd' on page 20 undefined on input line 669.
+
+
+LaTeX Warning: Reference `fig:subd2' on page 20 undefined on input line 675.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 680.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 680.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 680.
+[20
 
 ] [21] [22
 
+] [23] [24
+
 ]
 Appendix A.
-[23] [24]
-Underfull \vbox (badness 10000) detected at line 836
- []
-
-
-Overfull \vbox (2.29527pt too high) detected at line 836
- []
-
 [25] [26]
+Underfull \vbox (badness 10000) detected at line 841
+ []
+
+
+Overfull \vbox (2.29527pt too high) detected at line 841
+ []
+
+[27] [28]
 Appendix B.
-[27
+[29
 
-] [28
+] [30
 
-] [29
+] [31
 
 ] (./thesis.aux)
 
@@ -725,18 +738,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6C965A2495CAC30D9F99BB9752CBA40F;3660.
  ) 
 Here is how much of TeX's memory you used:
- 14842 strings out of 480247
- 247521 string characters out of 5893982
- 552182 words of memory out of 5000000
- 32192 multiletter control sequences out of 15000+600000
- 550932 words of font info for 181 fonts, out of 8000000 for 9000
+ 14883 strings out of 480247
+ 248109 string characters out of 5893982
+ 552101 words of memory out of 5000000
+ 32208 multiletter control sequences out of 15000+600000
+ 570991 words of font info for 196 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,69p,1003b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}<c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb><c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (47 pages, 376100 bytes).
+Output written on thesis.pdf (49 pages, 451512 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 494 compressed objects within 5 object streams
- 119 named destinations out of 1000 (max. 500000)
- 43224 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 53469 words of extra memory for PDF output out of 61914 (max. 10000000)
 

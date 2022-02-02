@@ -24,7 +24,7 @@
 %% Preamble
 %%
 % \documentclass{<something>} must begin each LaTeX document
-\documentclass[12pt,twoside]{reedthesis}
+\documentclass[12pt,twoside]{ucthesis}
 % Packages are extensions to the basic LaTeX functions. Whatever you
 % want to typeset, there is probably a package out there for it.
 % Chemistry (chemtex), screenplays, you name it.
@@ -113,20 +113,20 @@
   \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 % To pass between YAML and LaTeX the dollar signs are added by CII
-\title{My Final College Paper}
+\title{RMarkdown template}
 \author{Your R. Name}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{May 20xx}
-\division{Mathematics and Natural Sciences}
+\division{Facualty}
 \advisor{Advisor F. Name}
-\institution{Reed College}
-\degree{Bachelor of Arts}
+\institution{University of Canberra}
+\degree{Doctor of Philosophy}
 %If you have two advisors for some reason, you can use the following
 % Uncommented out by CII
 % End of CII addition
 
 %%% Remember to use the correct department!
-\department{Mathematics}
+\department{Institue of Applied Ecology}
 % if you're writing a thesis in an interdisciplinary major,
 % uncomment the line below and change the text as appropriate.
 % check the Senior Handbook if unsure.
@@ -248,6 +248,11 @@ Second paragraph of abstract starts here.
   \end{dedication}
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
+
+The acknowledgments, preface, dedication, and abstract are added into the PDF
+version automatically by inputting them in the YAML at the top of this file.
+Alternatively, you can put that content in files like 00--prelim.Rmd and
+00-abstract.Rmd like done below.
 
 \hypertarget{introduction}{%
 \chapter*{Introduction}\label{introduction}}

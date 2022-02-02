@@ -287,43 +287,61 @@
   {\pagestyle{empty}
   \fontsize{12}{14}\selectfont
   \begin{titlepage}
-  \newpage
-  \let\footnotesize\small
-  \let\footnoterule\relax
-  \let \footnote \thanks
-
-  \baselineskip = 1.4\baselineskip
-  \setbox0=\hbox{of the Requirements for the Degree}
-
+  
   \begin{center}
-    \setcounter{page}{1}
-    \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
-    \@institution
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \bigskip
-    \centerline{}
-    \bigskip
-    {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      \@author
-    \end{tabular}\par}
-    \vskip 1.5em
-    {\fontsize{12}{14}\selectfont \@date \par}
-  \end{center}\par
+  % Figure added
+  \includegraphics[width=0.5\columnwidth]{figure/UC_Logo.png}
+  
+  \Huge \textbf{\emph{Thesis title}} \\[30mm]
+\LARGE \textbf{\emph{Author}} \\[50mm]
+%\large A Thesis Submitted for the Degree of Doctor of Philosophy of the University of Canberra\\[30mm]
+
+\large A Thesis Submitted for the Degree of Doctor of Philosophy \\ 
+at the University of Canberra\\[30mm]
+
+\emph{Enter Date} \\[10mm]
+Faculty of Science and Technology\\[10mm]
+
+
+\end{center}
+  % \newpage
+  % \let\footnotesize\small
+  % \let\footnoterule\relax
+  % \let \footnote \thanks
+  % 
+  % \baselineskip = 1.4\baselineskip
+  % \setbox0=\hbox{of the Requirements for the Degree}
+  % 
+  % \begin{center}
+  %   \setcounter{page}{1}
+  %   \null\vfil
+  %   {\fontsize{12}{14}\selectfont \@title}
+  %   \vfil
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \vfil
+  %   A Thesis \\
+  %   Presented to \\
+  %   \@thedivisionof \ \@division \\
+  %   \@institution
+  %   \vfil
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \vfil
+  %   In Partial Fulfillment \\
+  %   of the Requirements for the Degree \\
+  %   \@degree
+  %   \vfil
+  %   
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \includegraphics[width=0.5\columnwidth]{Figure/UC_Logo.png}
+  %   \centerline{}
+  % 
+  %   {\fontsize{12}{14}\selectfont \lineskip .75em
+  %   \begin{tabular}[t]{c}%
+  %     \@author
+  %   \end{tabular}\par}
+  %   \vskip 1.5em
+  %   {\fontsize{12}{14}\selectfont \@date \par}
+  % \end{center}\par
   \end{titlepage}
 
 %% Approved for the division page

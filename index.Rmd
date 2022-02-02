@@ -1,15 +1,15 @@
 ---
-title: 'My Final College Paper'
+title: 'RMarkdown template'
 author: 'Your R. Name'
 date: 'May 20xx'
-institution: 'Reed College'
-division: 'Mathematics and Natural Sciences'
+institution: 'University of Canberra'
+division: 'Facualty'
 advisor: 'Advisor F. Name'
 # If you have more two advisors, un-silence line 7
 #altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
-# knit: bookdown::render_book
+department: 'Institue of Applied Ecology'
+degree: 'Doctor of Philosophy'
+knit: bookdown::render_book
 site: bookdown::bookdown_site
 
 # The next two lines allow you to change the spacing in your thesis. You can 
@@ -24,8 +24,9 @@ params:
   
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
-# output:
-#   thesisdown::thesis_pdf: default
+output: 
+  thesisdown::thesis_pdf: 
+    default
 #  thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
@@ -53,6 +54,29 @@ csl: csl/apa.csl
 lot: true
 lof: true
 ---
+
+<!-- % This document creates the title page -->
+<!-- % -->
+<!-- %-------------------------------------------------------------------- -->
+<!-- % -->
+<!-- \begin{titlepage} -->
+<!-- \begin{center} -->
+<!-- \Huge \textbf{\emph{Statistical Modelling Using Non-Randomized Observational Studies}} -->
+<!-- \\[30mm] -->
+<!-- \LARGE \textbf{\emph{Paul R Dewick}} \\[50mm] -->
+<!-- %\large A Thesis Submitted for the Degree of Doctor of Philosophy of the University of Canberra\\[30mm] -->
+<!-- \large A Thesis Submitted for the Degree of Doctor of Philosophy in Mathermatics \\ at the University of Canberra\\[30mm] -->
+<!-- \emph{Enter Date} \\[10mm] -->
+<!-- Faculty of Science and Technology\\[10mm] -->
+<!-- % -->
+<!-- \includegraphics[width=0.5\columnwidth]{figure/UC_Logo.png} -->
+
+<!-- \end{center} -->
+
+<!-- % -->
+<!-- %-------------------------------------------------------------------- -->
+<!-- % -->
+<!-- \end{titlepage} -->
 
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
@@ -99,12 +123,10 @@ library(thesisdown)
 options(width = 70)
 ```
 
-<!--
 The acknowledgments, preface, dedication, and abstract are added into the PDF
 version automatically by inputting them in the YAML at the top of this file.
 Alternatively, you can put that content in files like 00--prelim.Rmd and
 00-abstract.Rmd like done below.
--->
 
 <!-- # ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")} -->
 <!-- #  -->
@@ -124,9 +146,9 @@ Welcome to the _R Markdown_ thesis template. This template is based on (and in m
 
 Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis.  The use of LaTeX in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities.  After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
 
-<!-- 
+<!--
 If you're still on the fence about using _R Markdown_, check out the resource
-for newbies available at <https://rbasics.netlify.com>. 
+for newbies available at <https://rbasics.netlify.com>.
 -->
 
 **Why use it?**
