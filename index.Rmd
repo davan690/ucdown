@@ -1,10 +1,10 @@
 ---
-title: 'RMarkdown template'
-author: 'Your R. Name'
-date: 'May 20xx'
+title: 'Understanding predator interactions using reproducible science'
+author: 'Anthony Davidson'
+date: 'January 2022'
 institution: 'University of Canberra'
-division: 'Facualty'
-advisor: 'Advisor F. Name'
+division: 'SciTech'
+advisor: 'Richard Duncan'
 # If you have more two advisors, un-silence line 7
 #altadvisor: 'Your Other Advisor'
 department: 'Institue of Applied Ecology'
@@ -24,10 +24,10 @@ params:
   
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
-output: 
-  thesisdown::thesis_pdf: 
-    default
-#  thesisdown::thesis_gitbook: default
+# output: 
+#   # thesisdown::thesis_pdf: 
+#     # default
+# #  thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 
@@ -40,13 +40,11 @@ abstract: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims"
 # like below, use a command like that for the abstract above.  Note that a tab 
 # is needed on the line after the `|`.
 acknowledgements: |
-  I want to thank a few people.
+  I want to thank a few people. Coming later....
 dedication: |
-  You can have a dedication here if you wish. 
+  My boys. 
 preface: |
-  This is an example of a thesis setup to use the reed thesis document class 
-  (for LaTeX) and the R bookdown package, in general.
-  
+  Reproducible methodology is the backbone to science.
 # Specify the location of the bibliography below
 bibliography: bib/thesis.bib
 # Download your specific csl file and refer to it in the line below.
@@ -128,9 +126,8 @@ version automatically by inputting them in the YAML at the top of this file.
 Alternatively, you can put that content in files like 00--prelim.Rmd and
 00-abstract.Rmd like done below.
 
-<!-- # ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")} -->
-<!-- #  -->
-<!-- # ``` -->
+```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")}
+```
 
 <!-- # ```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00-abstract.Rmd")} -->
 <!-- #  -->

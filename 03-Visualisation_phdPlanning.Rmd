@@ -1,0 +1,297 @@
+---
+alway_keep_html: true
+---
+
+```{r message=FALSE, warning=FALSE,echo = FALSE, include=FALSE}
+library(lubridate)
+## load libraries
+library(ggplot2)
+library(shiny)
+library(colourpicker)
+library(readxl)
+library(dplyr)
+library(readr)
+library(DT)
+#library(extrafont)
+#loadfonts()
+library(knitr)
+# glimpse(datBASE)
+# dt <- data.frame(mon = c(10, 4), day = c(10, 4), year = c(2017, 2018))
+
+# with(dt, ymd(paste(year, mon, day, sep = "-")))
+#> [1] "2017-10-10" "2018-04-04"
+#### these are now as csv files for each datasheet entry
+#orginal excel in Raw_data file...
+#no conversion to csv to aviod same data issues...
+
+datPhD <- readr::read_csv(here::here("./data/PhDProjects.csv"))
+datCouncil <- readr::read_csv(here::here("./data/CouncilProjects.csv"))
+datInvert <- readr::read_csv(here::here("./data/InvertProjects.csv"))
+## Full tasks database
+datBASE <- bind_rows(datPhD, datCouncil, datInvert) %>%
+  filter(project != "NA") %>%
+    mutate(month = as.factor(month))
+
+#17levels need sorting
+# levels(datBASE$month) <- c("january","february", "march", "april", "may" ,"june", "july", "august","september", "october", "november", "december")
+
+### to correct ggplot subset
+datBASE1 <- datBASE  %>%
+    dplyr::select(startDate,month, year, milestone, status, shortName, project) %>%
+                 mutate(date = as.Date(startDate, "%d/%m/%y"))
+# ,
+#                        month = as.numeric(as.character(month)),
+#                        year = as.numeric(year),
+#                        milestone = as.factor(milestone),
+#                        status = as.factor(status))
+# glimpse(datBASE1)
+# df$date <- with(df, ymd(sprintf('%04d%02d%02d', year, month, 1)))
+df <- datBASE1
+
+# library(lubridate)
+# dt <- data.frame(mon = c(10, 4), day = c(10, 4), year = c(2017, 2018))
+# with(dt, ymd(paste(year, mon, day, sep = "-")))
+#> [1] "2017-10-10" "2018-04-04"
+
+# datBASE1$date <- with(datBASE1, ymd(sprintf('%04d%02d%02d', year, month, 1)))
+df <- df[with(df, order(date)), ]
+# head(df)
+text_offset <- 0.05
+
+
+# Now let’s load in some data
+#milestones is the demo data
+#actions is my data
+
+df <- readr::read_csv(here::here('./data/milestones.csv'))
+
+# df$status
+# names(datBASE)
+### Subset dataframe
+
+
+# > time.check= seq(as.Date('1985-01-01'),as.Date('2012-12-31'),by='day')
+# > length(time.check)
+# [1] 10227
+# 
+# DF <- data.frame(Year = rep(1985, 4), 
+#                  Month = rep(1, 4), 
+#                  Day = c(1,2,5,6), 
+#                  Z = 7:10)
+# DF
+# #>   Year Month Day  Z
+# #> 1 1985     1   1  7
+# #> 2 1985     1   2  8
+# #> 3 1985     1   5  9
+# #> 4 1985     1   6 10
+# colnames(DF)[4] <- "Data"
+# DF
+# #>   Year Month Day Data
+# #> 1 1985     1   1    7
+# #> 2 1985     1   2    8
+# #> 3 1985     1   5    9
+# #> 4 1985     1   6   10
+# library(lubridate)
+# #> 
+# #> Attaching package: 'lubridate'
+# #> The following object is masked from 'package:base':
+# #> 
+# #>     date
+# DF$DATE <- make_date(year = DF$Year, month = DF$Month, day = DF$Day)
+# DF
+# #>   Year Month Day Data       DATE
+# #> 1 1985     1   1    7 1985-01-01
+# #> 2 1985     1   2    8 1985-01-02
+# #> 3 1985     1   5    9 1985-01-05
+# #> 4 1985     1   6   10 1985-01-06
+# FullSeq <- seq.Date(from = min(DF$DATE), to = max(DF$DATE), by = 1)
+# Missing <- FullSeq[!FullSeq %in% DF$DATE]
+# Missing
+# #> [1] "1985-01-03" "1985-01-04"
+
+## First make up some mock data
+# my_data <- data.frame(date = seq(as.Date("2010-01-01"), as.Date("2015-12-31"), 
+#                                 by = "1 month"), 
+#                      value = rnorm(72))
+# 
+# ## Remove some observations so we have an incomplete data set
+# my_incomplete_data <- my_data[sort(sample(nrow(my_data), 60)), ]
+# 
+# ## Make a data frame with a full series of dates from the min date to the max date
+# ## in the incomplete data frame
+# full_dates <- seq(min(my_incomplete_data$date), max(my_incomplete_data$date), 
+#                   by = "1 month")
+# full_dates <- data.frame(date = full_dates)
+# 
+# ## Merge the complete data frame with the incomplete to fill in the dates and add 
+# ## NAs for missing values
+# my_complete_data <- merge(full_dates, my_incomplete_data, by = "date", 
+#                           all.x = TRUE)
+
+# NOT RUN {
+## locale-specific version of the date
+# format(Sys.Date(), "%a %b %d")
+# }
+# NOT RUN {
+## read in date info in format 'ddmmmyyyy'
+## This will give NA(s) in some locales; setting the C locale
+## as in the commented lines will overcome this on most systems.
+## lct <- Sys.getlocale("LC_TIME"); Sys.setlocale("LC_TIME", "C")
+# x <- c("1jan1960", "2jan1960", "31mar1960", "30jul1960")
+# z <- as.Date(x, "%d%b%Y")
+## Sys.setlocale("LC_TIME", lct)
+# z
+
+## read in date/time info in format 'm/d/y'
+# dates <- c("02/27/92", "02/27/92", "01/14/92", "02/28/92", "02/01/92")
+# as.Date(dates, "%m/%d/%y")
+
+## date given as number of days since 1900-01-01 (a date in 1989)
+# as.Date(32768, origin = "1900-01-01")
+## Excel is said to use 1900-01-01 as day 1 (Windows default) or
+## 1904-01-01 as day 0 (Mac default), but this is complicated by Excel
+## incorrectly treating 1900 as a leap year.
+## So for dates (post-1901) from Windows Excel
+# as.Date(35981, origin = "1899-12-30") # 1998-07-05
+## and Mac Excel
+# as.Date(34519, origin = "1904-01-01") # 1998-07-05
+## (these values come from http://support.microsoft.com/kb/214330)
+
+## Experiment shows that Matlab's origin is 719529 days before ours,
+## (it takes the non-existent 0000-01-01 as day 1)
+## so Matlab day 734373 can be imported as
+# as.Date(734373, origin = "1970-01-01") - 719529 # 2010-08-23
+## (value from
+## http://www.mathworks.de/de/help/matlab/matlab_prog/represent-date-and-times-in-MATLAB.html)
+
+## Time zone effect
+# z <- ISOdate(2010, 04, 13, c(0,12)) # midnight and midday UTC
+# as.Date(z) # in UTC
+# }
+# NOT RUN {
+# ## these time zone names are common
+# as.Date(z, tz = "NZ")
+# as.Date(z, tz = "HST") # Hawaii
+# }
+
+# set Home directory > home = setwd(Sys.getenv("HOME")); >  > # make path to the csv file > fpath = file.path(home, "Desktop", "at0901.csv"); > # read the csv file > at0901 = read.csv(fpath, header=TRUE);
+```
+
+
+# Visualisation {.tabset}
+
+Generally the concept is to create a baseline dataset of information and then extend this using `dataspice` to create a tidy format of data that can then be modelled and visualised using the `tidyverse` suite of tools.
+
+[*Creating timeline charts in R (Generating Timeline charts: Blog online)*]()
+
+### Action tasks
+
+Table by the group of project month or something else???
+
+#### Table 1
+
+```{r}
+table(datBASE1$month, datBASE1$project)
+```
+ 
+#### Table 2
+
+```{r}
+table(datBASE1$month, datBASE1$project, datBASE1$status)
+```
+
+To do this I have created a calendar for each key project/impact/aspect of short-term timeline, objectives, as well as, my career and life projection. To begin with I need to create timelines and other project goals under covid19. I have put this into a single dataset called `dat` here.
+
+These figures can be generated using `ggplot` and other `tidyverse` approaches due to the implantation of the `dataspice` packages above. We will use *ggplot* function from *ggplot2* package to generate timeline charts. The following plots can be created using layers to detail charts.
+
+## `ggplot2` {.tabset}
+
+### Milestones timeline
+
+"Coverting a dataframe into a timeline"
+
+### Factoring
+
+```{r}
+#factoring
+status_levels <- c("Complete", "On Target", "At Risk", "Critical")
+
+status_colors <- c("#0070C0", "#00B050", "#FFC000", "#C00000")
+
+df$status <- factor(df$status, levels=status_levels, ordered=TRUE)
+```
+
+### Direction
+
+```{r}
+library(lubridate)
+df <- readr::read_csv(here::here('./data/milestones.csv'))
+df$date <- with(df, ymd(sprintf('%04d%02d%02d', year, month, 1)))
+#direction
+positions <- c(0.5, -0.5, 1.0, -1.0, 1.5, -1.5)
+directions <- c(1, -1)
+
+line_pos <- data.frame(
+    "date"=unique(df$date),
+    "position"=rep(positions, length.out=length(unique(df$date))),
+    "direction"=rep(directions, length.out=length(unique(df$date)))
+)
+
+df <- merge(x=df, y=line_pos, by="date", all = TRUE)
+df <- df[with(df, order(date, status)), ]
+
+df$month_count <- ave(df$date==df$date, df$date, FUN=cumsum)
+text_offset <- 0.2
+
+df$text_position <- (df$month_count * text_offset * df$direction) + df$position
+head(df)
+```
+
+
+### Counts
+
+```{r}
+text_offset <- 0.2
+
+df$month_count <- ave(df$date==df$date, df$date, FUN=cumsum)
+df$text_position <- (df$month_count * text_offset * df$direction) + df$position
+head(df)
+```
+
+
+### Buffering times
+
+
+```{r eval = FALSE}
+month_buffer <- 2
+
+month_date_range <- seq(min(df$date) - months(month_buffer), max(df$date) + months(month_buffer), by='month')
+month_format <- format(month_date_range, '%b')
+month_df <- data.frame(month_date_range, month_format)
+```
+
+
+### December/January only
+
+```{r eval = FALSE}
+year_date_range <- seq(min(df$date) - months(month_buffer), max(df$date) + months(month_buffer), by='year')
+year_date_range <- as.Date(
+    intersect(
+        ceiling_date(year_date_range, unit="year"),
+        floor_date(year_date_range, unit="year")
+    ),  origin = "1970-01-01"
+)
+year_format <- format(year_date_range, '%Y')
+year_df <- data.frame(year_date_range, year_format)
+```
+
+
+### Interactivity
+
+Shiny....
+
+```{r include=FALSE}
+library(shiny)
+library(visNetwork)
+# shiny::runApp(system.file("shiny", package = "visNetwork"))
+```

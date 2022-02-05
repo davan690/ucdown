@@ -1,0 +1,88 @@
+,milestone,month,year,status,shortName,Notes,startDate,date
+1,PhDmilestone 5,october,2020,On Target,tidyPipesPhD,NA,1/3/2020,0001-03-20
+2,PhDmilestone 37,april,2016,Complete,scholarship1,NA,7/4/2016,0007-04-20
+3,PhDmilestone 38,march,2018,Complete,scholarship2sick,NA,8/3/2019,0008-03-20
+4,PhDmilestone 39,june,2019,Complete,scholarship3,NA,8/6/2019,0008-06-20
+5,PhDmilestone 11,november,2020,On Target,FINALseminar,Final talk for my PhD work,11/1/2020,0011-01-20
+6,Councilmilestone1,february,2020,Impact,councilExtra,NA,17/02/2020,0017-02-20
+7,PhDmilestone 31,march,2020,Impact,councilExtra,NA,11/3/2020,0011-03-20
+8,PhDmilestone 29,march,2020,Impact,councilExtra,NA,31/03/2020,0031-03-20
+9,PhDmilestone 27,april,2020,Impact,councilExtra,NA,21/04/2020,0021-04-20
+10,PhDmilestone 17,july,2020,On Target,tidyPipesPhD,NA,31/07/2020,0031-07-20
+11,Lifemilestone2,june,2020,At Risk,RENT271bond,bond (half only),17/06/2020,0017-06-20
+12,Lifemilestone3,june,2020,Complete,RENT271,NA,18/06/2020,0018-06-20
+13,Lifemilestone4,june,2020,Complete,RENT271,NA,19/06/2020,0019-06-20
+14,Lifemilestone5,june,2020,Complete,RENT271,NA,20/06/2020,0020-06-20
+15,Lifemilestone6,june,2020,Complete,RENT271,NA,21/06/2020,0021-06-20
+16,Lifemilestone7,july,2020,At Risk,power271,NA,22/06/2020,0022-06-20
+17,Lifemilestone8,july,2020,At Risk,gas271,NA,23/06/2020,0023-06-20
+18,Lifemilestone9,july,2020,At Risk,internet271,NA,24/06/2020,0024-06-20
+19,Lifemilestone10,september,2020,At Risk,power271,quarterly powerbill,25/06/2020,0025-06-20
+20,Lifemilestone11,september,2020,At Risk,gas271,6month gas bill?,26/06/2020,0026-06-20
+21,Lifemilestone12,september,2020,At Risk,internet271,New internet plan?,27/06/2020,0027-06-20
+22,Lifemilestone13,august,2020,At Risk,internet271,NA,28/06/2020,0028-06-20
+23,Lifemilestone39,june,2021,Complete,internet271,internet orginally covered by brendan,29/06/2020,0029-06-20
+24,Lifemilestone14,june,2020,Complete,daveChoqScholarship,NA,30/06/2020,0030-06-20
+25,PhDmilestone 1,july,2020,On Target,FullPhDleft,NA,1/7/2020,0001-07-20
+26,Lifemilestone15,june,2020,Complete,daveChoqScholarship,NA,1/7/2020,0001-07-20
+27,Lifemilestone16,march,2020,Complete,daveChoqScholarship,NA,2/7/2020,0002-07-20
+28,Lifemilestone17,march,2020,Complete,daveChoqScholarship,NA,3/7/2020,0003-07-20
+29,Lifemilestone18,april,2020,Complete,daveChoqScholarship,NA,4/7/2020,0004-07-20
+30,Lifemilestone19,march,2020,Complete,power271,NA,5/7/2020,0005-07-20
+31,Lifemilestone20,march,2020,Complete,gas271,NA,6/7/2020,0006-07-20
+32,PhDmilestone 2,june,2020,Stress,ScholarShip_end,Currently with Richard,7/7/2020,0007-07-20
+33,Lifemilestone21,march,2020,Complete,internet271,NA,7/7/2020,0007-07-20
+34,Lifemilestone22,december,2020,On Target,power271,NA,8/7/2020,0008-07-20
+35,Lifemilestone23,december,2020,On Target,gas271,NA,9/7/2020,0009-07-20
+36,Lifemilestone24,december,2020,On Target,internet271,NA,10/7/2020,0010-07-20
+37,Lifemilestone25,august,2019,On Target,power271,NA,11/7/2020,0011-07-20
+38,Lifemilestone26,august,2019,On Target,gas271,NA,12/7/2020,0012-07-20
+39,Lifemilestone27,august,2019,On Target,internet271,NA,13/07/2020,0013-07-20
+40,Lifemilestone28,march,2020,Complete,daveChoqScholarship,NA,14/07/2020,0014-07-20
+41,Lifemilestone29,march,2020,Complete,daveChoqScholarship,NA,15/07/2020,0015-07-20
+42,Lifemilestone30,april,2020,Complete,daveChoqScholarship,NA,16/07/2020,0016-07-20
+43,Lifemilestone31,april,2020,Complete,daveChoqScholarship,NA,17/07/2020,0017-07-20
+44,Lifemilestone32,april,2020,Complete,daveChoqScholarship,NA,18/07/2020,0018-07-20
+45,Lifemilestone33,may,2020,Complete,daveChoqScholarship,NA,19/07/2020,0019-07-20
+46,Lifemilestone34,may,2020,Complete,daveChoqScholarship,NA,20/07/2020,0020-07-20
+47,Lifemilestone35,may,2020,Complete,daveChoqScholarship,NA,21/07/2020,0021-07-20
+48,Lifemilestone36,march,2020,Complete,daveChoqScholarship,NA,22/07/2020,0022-07-20
+49,Lifemilestone37,march,2020,Complete,daveChoqScholarship,NA,23/07/2020,0023-07-20
+50,PhDmilestone 14,may,2020,On Target,tidyPipesPhD,Comments on reproducibility,NA,NA
+51,Lifemilestone38,april,2020,Complete,daveChoqScholarship,NA,24/07/2020,0024-07-20
+52,Lifemilestone40,april,2020,Complete,daveChoqScholarship,NA,25/07/2020,0025-07-20
+53,Lifemilestone64,june,2020,Impact,RENT271bond,NA,26/07/2020,0026-07-20
+54,Lifemilestone65,june,2020,Impact,RENT271,NA,27/07/2020,0027-07-20
+55,Lifemilestone66,june,2020,Impact,RENT271,NA,28/07/2020,0028-07-20
+56,Lifemilestone67,june,2020,Impact,RENT271,NA,29/07/2020,0029-07-20
+57,Lifemilestone68,june,2020,Impact,RENT271,NA,30/07/2020,0030-07-20
+58,PhDmilestone 15,march,2020,On Target,tidyPipesPhD,Comment to nature draft attached,NA,NA
+59,PhDmilestone 16,june,2020,On Target,tidyPipesPhD,Sent to collaborators and supervisors,NA,NA
+60,PhDmilestone 18,july,2020,On Target,stressPhD,NA,31/07/2020,0031-07-20
+61,PhDmilestone 21,july,2019,On Target,BeechManuscript,Done,NA,NA
+62,PhDmilestone 19,july,2020,Underway,InvasiveSPPDatabase,Have tidyPipes approach documented and applied here,31/07/2020,0031-07-20
+63,PhDmilestone 20,august,2020,Underway,stressPhD,Working on draft currently,31/07/2020,0031-07-20
+64,PhDmilestone 10,june,2020,Complete,Repropaper,On back burner,1/6/2020,0001-06-20
+65,PhDmilestone 6,july,2020,Rejected,natureMANUSCRIPT,Rejected,1/11/2020,0001-11-20
+66,PhDmilestone 22,december,2019,On Target,MPDmanuscript,Begin finalising mid-August from this work last year,31/07/2019,0031-07-20
+67,PhDmilestone 23,april,2020,On Target,MPDmanuscript,NA,NA,NA
+68,PhDmilestone 24,august,2020,On Target,MPDmanuscript,NA,31/07/2020,0031-07-20
+69,PhDmilestone 25,september,2020,On Target,MPDmanuscript,NA,31/07/2020,0031-07-20
+70,PhDoption 40,september,2021,Stress,scholarship4work,NA,1/8/2020,0001-08-20
+71,PhDoption 41,june,2021,Stress,scholarship5three,NA,1/8/2020,0001-08-20
+72,PhDoption 42,january,2021,Stress,scholarship6six,NA,1/8/2020,0001-08-20
+73,PhDmilestone 9,august,2020,On Target,MPDmanuscript,HOPEFULLY timeframes are optomidtic at best,15/08/2020,0015-08-20
+74,PhDmilestone 3,august,2020,On Target,MethodsPhD,This progress on this is underway,1/8/2020,0001-08-20
+75,PhDmilestone 12,august,2020,On Target,WorkINprogress,Just waiting on when is best for this,15/08/2020,0015-08-20
+76,PhDmilestone 13,august,2020,On Target,GEM seminar,Booked already,21/08/2020,0021-08-20
+77,PhDmilestone 53,august,2020,At Risk,InvasiveSPPdatabase,This is a long-term project that has progressed during my PhD,11/8/2020,0011-08-20
+78,PhDmilestone 4,october,2020,On Target,DiscussionPhDleft,Building the wrapping publication on the application of the invasive species database for community groups and researchers.,1/9/2020,0001-09-20
+79,PhDmilestone 8,november,2019,Richard,BeechManuscript,Beech paper manuscript with Richard Currently,1/11/2020,0001-11-20
+80,PhDmilestone 28,november,2020,Impact,councilExtra,NA,17/11/2020,0017-11-20
+81,PhDmilestone 7,december,2020,Critical,submit,NA,31/12/2020,0031-12-20
+82,PhDmilestone 30,april,2020,Impact,councilExtra,NA,31/04/2020,0031-04-20
+83,Councilmilestone1,august,2020,On Target,councilExtra,NA,31/04/2020,0031-04-20
+84,Councilmilestone1,july,2020,Impact,councilExtra,NA,31/04/2020,0031-04-20
+85,PhDmilestone 35,July,2020,On Target,councilExtra,NA,31/04/2020,0031-04-20
+86,PhDmilestone 32,June,2020,Impact,councilExtra,NA,31/04/2020,0031-04-20
+87,PhDmilestone 34,may,2020,Impact,councilExtra,NA,31/04/2020,0031-04-20

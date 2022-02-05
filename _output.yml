@@ -3,14 +3,14 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">UC PhD introduction</a></li>
-      after: |
-        <li><a href="https://github.com/davan690/phd-thesis" target="blank">Published with bookdown</a></li>
+        <li><a href="./">Reproducible research</a></li>
+# after: |
+# <li><a href="https://github.com/davan690/phd-thesis" target="blank">Published with bookdown</a></li>
     edit: https://github.com/davan690/phd-thesis/docs/%s
     download: ["pdf", "epub", "mobi", "docx"]
-thesisdown::thesis_pdf:
-  includes:
-    in_header: TitlePage.tex
+# thesisdown::thesis_pdf: default
+  # includes:
+  #   in_header: TitlePage.tex
   # latex_engine: xelatex
   # citation_package: natbib
   # keep_tex: yes
@@ -19,15 +19,15 @@ thesisdown::thesis_pdf:
 #   # reference_docx: template.docx
 #   fig_caption: yes
 #   toc: yes
-# bookdown::html_document2:
-#   theme: journal
-#   highlight: kate
-#   fig_caption: yes
-#   toc: yes
-#   toc_float: true
-#   code_folding: hide
-#   df_print: paged
-#   number_sections: false
+bookdown::html_document2:
+  theme: journal
+  highlight: kate
+  fig_caption: yes
+  toc: yes
+  toc_float: true
+  code_folding: hide
+  df_print: paged
+  number_sections: false
   
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.

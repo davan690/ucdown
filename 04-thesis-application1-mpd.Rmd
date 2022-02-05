@@ -1,0 +1,11 @@
+---
+always_allow_html: true
+---
+
+# Mixed Podocarp forests {#app-mpd}
+
+I then apply a Bayesian modelling framework to two case studies, increasing in complexity. These case studies incorporate both the proposed ecological processes (e.g. predation) and observation error (e.g. estimating population size) from the research synthesis.
+
+*[publication: Davidson2020-MPD-forests]*
+
+A more complex set of interreacting invasive species.

@@ -1,0 +1,18 @@
+---
+always_allow_html: true
+---
+
+## Manual References
+
+- Mislan, K. A. S., Jeffrey M. Heer, and Ethan P. White. 2016. “Elevating The Status of Code in Ecology.” Trends in Ecology & Evolution 31 (1): 4–7. https://doi.org/10.1016/j.tree.2015.11.006.
+
+- Ouzzani, Mourad, Hossam Hammady, Zbys Fedorowicz, and Ahmed Elmagarmid. 2016. “Rayyana Web and Mobile App for Systematic Reviews.” Systematic Reviews 5 (1): 210. https://doi.org/10.1186/s13643-016-0384-4.
+
+- Stodden, Victoria, Peixuan Guo, and Zhaokun Ma. 2013. “Toward Reproducible Computational Research: An Empirical Analysis of Data and Code Policy Adoption by Journals.” PLOS ONE 8 (6): e67111. https://doi.org/10.1371/journal.pone.0067111.
+
+- Team, R Core. 2018. “R: A Language and Environment for Statistical Computing.” Vienna, Austria: R Foundation for Statistical Computing.
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+<!-- # References {#refs} -->

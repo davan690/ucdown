@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Visualisation | R Notebook</title>
+  <meta name="description" content="Chapter 6 Visualisation | R Notebook" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Visualisation | R Notebook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Visualisation | R Notebook" />
+  
+  
+  
+
+<meta name="author" content="Anthony Davidson" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="feedback.html"/>
+<link rel="next" href="conclusion.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="rmd-basics.html"><a href="rmd-basics.html"><i class="fa fa-check"></i><b>1</b> R Markdown Basics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rmd-basics.html"><a href="rmd-basics.html#lists"><i class="fa fa-check"></i><b>1.1</b> Lists</a></li>
+<li class="chapter" data-level="1.2" data-path="rmd-basics.html"><a href="rmd-basics.html#line-breaks"><i class="fa fa-check"></i><b>1.2</b> Line breaks</a></li>
+<li class="chapter" data-level="1.3" data-path="rmd-basics.html"><a href="rmd-basics.html#r-chunks"><i class="fa fa-check"></i><b>1.3</b> R chunks</a></li>
+<li class="chapter" data-level="1.4" data-path="rmd-basics.html"><a href="rmd-basics.html#inline-code"><i class="fa fa-check"></i><b>1.4</b> Inline code</a></li>
+<li class="chapter" data-level="1.5" data-path="rmd-basics.html"><a href="rmd-basics.html#including-plots"><i class="fa fa-check"></i><b>1.5</b> Including plots</a></li>
+<li class="chapter" data-level="1.6" data-path="rmd-basics.html"><a href="rmd-basics.html#loading-and-exploring-data"><i class="fa fa-check"></i><b>1.6</b> Loading and exploring data</a></li>
+<li class="chapter" data-level="1.7" data-path="rmd-basics.html"><a href="rmd-basics.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="math-sci.html"><a href="math-sci.html"><i class="fa fa-check"></i><b>2</b> Mathematics and Science</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="math-sci.html"><a href="math-sci.html#math"><i class="fa fa-check"></i><b>2.1</b> Math</a></li>
+<li class="chapter" data-level="2.2" data-path="math-sci.html"><a href="math-sci.html#chemistry-101-symbols"><i class="fa fa-check"></i><b>2.2</b> Chemistry 101: Symbols</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="math-sci.html"><a href="math-sci.html#typesetting-reactions"><i class="fa fa-check"></i><b>2.2.1</b> Typesetting reactions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="math-sci.html"><a href="math-sci.html#other-examples-of-reactions"><i class="fa fa-check"></i><b>2.2.2</b> Other examples of reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="math-sci.html"><a href="math-sci.html#physics"><i class="fa fa-check"></i><b>2.3</b> Physics</a></li>
+<li class="chapter" data-level="2.4" data-path="math-sci.html"><a href="math-sci.html#biology"><i class="fa fa-check"></i><b>2.4</b> Biology</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lits.html"><a href="lits.html"><i class="fa fa-check"></i><b>3</b> Literature review</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="lits.html"><a href="lits.html#davidson2020-invasive-species-database"><i class="fa fa-check"></i><b>3.1</b> <code>[Davidson2020-Invasive species database]</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ref-labels.html"><a href="ref-labels.html"><i class="fa fa-check"></i><b>4</b> Graphics, References, and Labels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ref-labels.html"><a href="ref-labels.html#figures"><i class="fa fa-check"></i><b>4.1</b> Figures</a></li>
+<li class="chapter" data-level="4.2" data-path="ref-labels.html"><a href="ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>4.2</b> Footnotes and Endnotes</a></li>
+<li class="chapter" data-level="4.3" data-path="ref-labels.html"><a href="ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>4.3</b> Bibliographies</a></li>
+<li class="chapter" data-level="4.4" data-path="ref-labels.html"><a href="ref-labels.html#anything-else"><i class="fa fa-check"></i><b>4.4</b> Anything else?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>5</b> Feedback loop</a></li>
+<li class="chapter" data-level="6" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>6</b> Visualisation</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="visualisation.html"><a href="visualisation.html#action-tasks"><i class="fa fa-check"></i><b>6.0.1</b> Action tasks</a></li>
+<li class="chapter" data-level="6.1" data-path="visualisation.html"><a href="visualisation.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="visualisation.html"><a href="visualisation.html#milestones-timeline"><i class="fa fa-check"></i><b>6.1.1</b> Milestones timeline</a></li>
+<li class="chapter" data-level="6.1.2" data-path="visualisation.html"><a href="visualisation.html#factoring"><i class="fa fa-check"></i><b>6.1.2</b> Factoring</a></li>
+<li class="chapter" data-level="6.1.3" data-path="visualisation.html"><a href="visualisation.html#direction"><i class="fa fa-check"></i><b>6.1.3</b> Direction</a></li>
+<li class="chapter" data-level="6.1.4" data-path="visualisation.html"><a href="visualisation.html#counts"><i class="fa fa-check"></i><b>6.1.4</b> Counts</a></li>
+<li class="chapter" data-level="6.1.5" data-path="visualisation.html"><a href="visualisation.html#buffering-times"><i class="fa fa-check"></i><b>6.1.5</b> Buffering times</a></li>
+<li class="chapter" data-level="6.1.6" data-path="visualisation.html"><a href="visualisation.html#decemberjanuary-only"><i class="fa fa-check"></i><b>6.1.6</b> December/January only</a></li>
+<li class="chapter" data-level="6.1.7" data-path="visualisation.html"><a href="visualisation.html#interactivity"><i class="fa fa-check"></i><b>6.1.7</b> Interactivity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="chapter" data-level="7" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>7</b> Case studies</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="case-studies.html"><a href="case-studies.html#appbeech"><i class="fa fa-check"></i><b>7.1</b> Beech Forests</a></li>
+<li class="chapter" data-level="7.2" data-path="case-studies.html"><a href="case-studies.html#app-mpd"><i class="fa fa-check"></i><b>7.2</b> Mixed Podocarp forests</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="case-studies.html"><a href="case-studies.html#app-mpd"><i class="fa fa-check"></i><b>8</b> Mixed Podocarp forests</a></li>
+<li class="chapter" data-level="9" data-path="case-studies-1.html"><a href="case-studies-1.html"><i class="fa fa-check"></i><b>9</b> Case studies</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="case-studies-1.html"><a href="case-studies-1.html#beech"><i class="fa fa-check"></i><b>9.1</b> Beech Forests</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="case-studies-1.html"><a href="case-studies-1.html#davidson2020-beech-forests"><i class="fa fa-check"></i><b>9.1.1</b> <code>[Davidson2020-Beech-forests]</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="case-studies-1.html"><a href="case-studies-1.html#mpd"><i class="fa fa-check"></i><b>9.2</b> Mixed Podocarp forests</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="case-studies-1.html"><a href="case-studies-1.html#davidson2020-mpd-forests"><i class="fa fa-check"></i><b>9.2.1</b> <code>[Davidson2020-MPD-forests]</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html"><i class="fa fa-check"></i><b>10</b> Consistency with predictions</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html#intro-predictions"><i class="fa fa-check"></i><b>10.0.1</b> Intro predictions:</a></li>
+<li class="chapter" data-level="10.1" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html#methods-predictions"><i class="fa fa-check"></i><b>10.1</b> Methods predictions:</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="the-first-appendix.html"><a href="the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="the-second-appendix-for-fun.html"><a href="the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="C" data-path="discus.html"><a href="discus.html"><i class="fa fa-check"></i><b>C</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="discus.html"><a href="discus.html#davidson2020-pfnz2050"><i class="fa fa-check"></i><b>C.1</b> <code>[Davidson2020-PFNZ2050]</code></a></li>
+<li class="chapter" data-level="C.2" data-path="discus.html"><a href="discus.html#manual-references"><i class="fa fa-check"></i><b>C.2</b> Manual References</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Notebook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="visualisation" class="section level1 tabset" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Visualisation</h1>
+<p>Generally the concept is to create a baseline dataset of information and then extend this using <code>dataspice</code> to create a tidy format of data that can then be modelled and visualised using the <code>tidyverse</code> suite of tools.</p>
+<p><a href=""><em>Creating timeline charts in R (Generating Timeline charts: Blog online)</em></a></p>
+<div id="action-tasks" class="section level3" number="6.0.1">
+<h3><span class="header-section-number">6.0.1</span> Action tasks</h3>
+<p>Table by the group of project month or something else???</p>
+<div id="table-1" class="section level4" number="6.0.1.1">
+<h4><span class="header-section-number">6.0.1.1</span> Table 1</h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="visualisation.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(datBASE1<span class="sc">$</span>month, datBASE1<span class="sc">$</span>project)</span></code></pre></div>
+<pre><code>##            
+##             council finances invert personal Phd PhD src
+##   april           0        6      0        0   0   0   0
+##   April           0        0      0        0   0   2   0
+##   august          1        4      4       16   2   5   8
+##   August          0        0      0        0   0   1   0
+##   december        1        3      0        0   0   1   4
+##   February        0        0      0        0   0   1   0
+##   july            0        3      8        0   0  15   4
+##   July            0        0      0        0   0   2   0
+##   june            0       13      0        0   0   1   4
+##   June            0        0      0        0   0   1   0
+##   march           0        9      0        0   0   0   0
+##   March           0        0      0        0   0   2   0
+##   may             0        3      0        0   0   0   0
+##   May             0        0      0        0   0   1   0
+##   november        0        0      0        0   0   3   4
+##   october         1        0      0        0   0   1   6
+##   september       0        3      0        0   0   1  11</code></pre>
+</div>
+<div id="table-2" class="section level4" number="6.0.1.2">
+<h4><span class="header-section-number">6.0.1.2</span> Table 2</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="visualisation.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(datBASE1<span class="sc">$</span>month, datBASE1<span class="sc">$</span>project, datBASE1<span class="sc">$</span>status)</span></code></pre></div>
+<pre><code>## , ,  = At Risk
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          0        1      0        0   0   4   0
+##   August          0        0      0        0   0   0   0
+##   december        0        0      0        0   0   0   0
+##   February        0        0      0        0   0   0   0
+##   july            0        3      0        0   0   1   0
+##   July            0        0      0        0   0   0   0
+##   june            0        1      0        0   0   0   0
+##   June            0        0      0        0   0   0   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   0   0
+##   october         0        0      0        0   0   0   0
+##   september       0        3      0        0   0   0   0
+## 
+## , ,  = Complete
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        6      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          0        0      0        0   0   0   0
+##   August          0        0      0        0   0   0   0
+##   december        0        0      0        0   0   0   0
+##   February        0        0      0        0   0   0   0
+##   july            0        0      3        0   0   1   4
+##   July            0        0      0        0   0   0   0
+##   june            0       12      0        0   0   1   4
+##   June            0        0      0        0   0   0   0
+##   march           0        9      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        3      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   2   0
+##   october         0        0      0        0   0   0   0
+##   september       0        0      0        0   0   0   0
+## 
+## , ,  = Critical
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          0        0      0        0   0   0   0
+##   August          0        0      0        0   0   0   0
+##   december        0        0      0        0   0   1   0
+##   February        0        0      0        0   0   0   0
+##   july            0        0      0        0   0   0   0
+##   July            0        0      0        0   0   0   0
+##   june            0        0      0        0   0   0   0
+##   June            0        0      0        0   0   0   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   0   0
+##   october         0        0      0        0   0   0   0
+##   september       0        0      0        0   0   0   0
+## 
+## , ,  = Dayly
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          0        0      0       16   2   0   0
+##   August          0        0      0        0   0   0   0
+##   december        0        0      0        0   0   0   0
+##   February        0        0      0        0   0   0   0
+##   july            0        0      0        0   0   0   0
+##   July            0        0      0        0   0   0   0
+##   june            0        0      0        0   0   0   0
+##   June            0        0      0        0   0   0   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   0   0
+##   october         0        0      0        0   0   0   0
+##   september       0        0      0        0   0   0   0
+## 
+## , ,  = Impact
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   2   0
+##   august          0        0      0        0   0   0   0
+##   August          0        0      0        0   0   1   0
+##   december        0        0      0        0   0   0   0
+##   February        0        0      0        0   0   1   0
+##   july            0        0      0        0   0   0   0
+##   July            0        0      0        0   0   2   0
+##   june            0        0      0        0   0   0   0
+##   June            0        0      0        0   0   1   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   2   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   1   0
+##   november        0        0      0        0   0   1   0
+##   october         0        0      0        0   0   0   0
+##   september       0        0      0        0   0   0   0
+## 
+## , ,  = Missed
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          0        0      0        0   0   0   0
+##   August          0        0      0        0   0   0   0
+##   december        0        0      0        0   0   0   0
+##   February        0        0      0        0   0   0   0
+##   july            0        0      1        0   0   0   0
+##   July            0        0      0        0   0   0   0
+##   june            0        0      0        0   0   0   0
+##   June            0        0      0        0   0   0   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   0   0
+##   october         0        0      0        0   0   0   0
+##   september       0        0      0        0   0   0   0
+## 
+## , ,  = On Target
+## 
+##            
+##             council finances invert personal Phd PhD src
+##   april           0        0      0        0   0   0   0
+##   April           0        0      0        0   0   0   0
+##   august          1        3      4        0   0   1   8
+##   August          0        0      0        0   0   0   0
+##   december        1        3      0        0   0   0   4
+##   February        0        0      0        0   0   0   0
+##   july            0        0      4        0   0  13   0
+##   July            0        0      0        0   0   0   0
+##   june            0        0      0        0   0   0   0
+##   June            0        0      0        0   0   0   0
+##   march           0        0      0        0   0   0   0
+##   March           0        0      0        0   0   0   0
+##   may             0        0      0        0   0   0   0
+##   May             0        0      0        0   0   0   0
+##   november        0        0      0        0   0   0   4
+##   october         1        0      0        0   0   1   6
+##   september       0        0      0        0   0   1  11</code></pre>
+<p>To do this I have created a calendar for each key project/impact/aspect of short-term timeline, objectives, as well as, my career and life projection. To begin with I need to create timelines and other project goals under covid19. I have put this into a single dataset called <code>dat</code> here.</p>
+<p>These figures can be generated using <code>ggplot</code> and other <code>tidyverse</code> approaches due to the implantation of the <code>dataspice</code> packages above. We will use <em>ggplot</em> function from <em>ggplot2</em> package to generate timeline charts. The following plots can be created using layers to detail charts.</p>
+</div>
+</div>
+<div id="ggplot2" class="section level2 tabset" number="6.1">
+<h2><span class="header-section-number">6.1</span> <code>ggplot2</code></h2>
+<div id="milestones-timeline" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Milestones timeline</h3>
+<p>“Coverting a dataframe into a timeline”</p>
+</div>
+<div id="factoring" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Factoring</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="visualisation.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#factoring</span></span>
+<span id="cb21-2"><a href="visualisation.html#cb21-2" aria-hidden="true" tabindex="-1"></a>status_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Complete&quot;</span>, <span class="st">&quot;On Target&quot;</span>, <span class="st">&quot;At Risk&quot;</span>, <span class="st">&quot;Critical&quot;</span>)</span>
+<span id="cb21-3"><a href="visualisation.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="visualisation.html#cb21-4" aria-hidden="true" tabindex="-1"></a>status_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#0070C0&quot;</span>, <span class="st">&quot;#00B050&quot;</span>, <span class="st">&quot;#FFC000&quot;</span>, <span class="st">&quot;#C00000&quot;</span>)</span>
+<span id="cb21-5"><a href="visualisation.html#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="visualisation.html#cb21-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>status <span class="ot">&lt;-</span> <span class="fu">factor</span>(df<span class="sc">$</span>status, <span class="at">levels=</span>status_levels, <span class="at">ordered=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="direction" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Direction</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="visualisation.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb22-2"><a href="visualisation.html#cb22-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&#39;./data/milestones.csv&#39;</span>))</span></code></pre></div>
+<pre><code>## Rows: 22 Columns: 4</code></pre>
+<pre><code>## -- Column specification ----------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr (2): milestone, status
+## dbl (2): month, year</code></pre>
+<pre><code>## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="visualisation.html#cb26-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>date <span class="ot">&lt;-</span> <span class="fu">with</span>(df, <span class="fu">ymd</span>(<span class="fu">sprintf</span>(<span class="st">&#39;%04d%02d%02d&#39;</span>, year, month, <span class="dv">1</span>)))</span>
+<span id="cb26-2"><a href="visualisation.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#direction</span></span>
+<span id="cb26-3"><a href="visualisation.html#cb26-3" aria-hidden="true" tabindex="-1"></a>positions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.0</span>, <span class="sc">-</span><span class="fl">1.0</span>, <span class="fl">1.5</span>, <span class="sc">-</span><span class="fl">1.5</span>)</span>
+<span id="cb26-4"><a href="visualisation.html#cb26-4" aria-hidden="true" tabindex="-1"></a>directions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb26-5"><a href="visualisation.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="visualisation.html#cb26-6" aria-hidden="true" tabindex="-1"></a>line_pos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb26-7"><a href="visualisation.html#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;date&quot;</span><span class="ot">=</span><span class="fu">unique</span>(df<span class="sc">$</span>date),</span>
+<span id="cb26-8"><a href="visualisation.html#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;position&quot;</span><span class="ot">=</span><span class="fu">rep</span>(positions, <span class="at">length.out=</span><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>date))),</span>
+<span id="cb26-9"><a href="visualisation.html#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;direction&quot;</span><span class="ot">=</span><span class="fu">rep</span>(directions, <span class="at">length.out=</span><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>date)))</span>
+<span id="cb26-10"><a href="visualisation.html#cb26-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-11"><a href="visualisation.html#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="visualisation.html#cb26-12" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x=</span>df, <span class="at">y=</span>line_pos, <span class="at">by=</span><span class="st">&quot;date&quot;</span>, <span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb26-13"><a href="visualisation.html#cb26-13" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="fu">with</span>(df, <span class="fu">order</span>(date, status)), ]</span>
+<span id="cb26-14"><a href="visualisation.html#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="visualisation.html#cb26-15" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>month_count <span class="ot">&lt;-</span> <span class="fu">ave</span>(df<span class="sc">$</span>date<span class="sc">==</span>df<span class="sc">$</span>date, df<span class="sc">$</span>date, <span class="at">FUN=</span>cumsum)</span>
+<span id="cb26-16"><a href="visualisation.html#cb26-16" aria-hidden="true" tabindex="-1"></a>text_offset <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
+<span id="cb26-17"><a href="visualisation.html#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="visualisation.html#cb26-18" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>text_position <span class="ot">&lt;-</span> (df<span class="sc">$</span>month_count <span class="sc">*</span> text_offset <span class="sc">*</span> df<span class="sc">$</span>direction) <span class="sc">+</span> df<span class="sc">$</span>position</span>
+<span id="cb26-19"><a href="visualisation.html#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##         date month year   milestone   status position direction
+## 1 2017-06-01     6 2017 Milestone 1 Complete      0.5         1
+## 2 2017-07-01     7 2017 Milestone 2 Complete     -0.5        -1
+## 3 2017-10-01    10 2017 Milestone 3 Complete      1.0         1
+## 4 2017-12-01    12 2017 Milestone 4 Complete     -1.0        -1
+## 5 2018-01-01     1 2018 Milestone 5 Complete      1.5         1
+## 6 2018-01-01     1 2018 Milestone 6 Complete      1.5         1
+##   month_count text_position
+## 1           1           0.7
+## 2           1          -0.7
+## 3           1           1.2
+## 4           1          -1.2
+## 5           1           1.7
+## 6           2           1.9</code></pre>
+</div>
+<div id="counts" class="section level3" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Counts</h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="visualisation.html#cb28-1" aria-hidden="true" tabindex="-1"></a>text_offset <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
+<span id="cb28-2"><a href="visualisation.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="visualisation.html#cb28-3" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>month_count <span class="ot">&lt;-</span> <span class="fu">ave</span>(df<span class="sc">$</span>date<span class="sc">==</span>df<span class="sc">$</span>date, df<span class="sc">$</span>date, <span class="at">FUN=</span>cumsum)</span>
+<span id="cb28-4"><a href="visualisation.html#cb28-4" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>text_position <span class="ot">&lt;-</span> (df<span class="sc">$</span>month_count <span class="sc">*</span> text_offset <span class="sc">*</span> df<span class="sc">$</span>direction) <span class="sc">+</span> df<span class="sc">$</span>position</span>
+<span id="cb28-5"><a href="visualisation.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##         date month year   milestone   status position direction
+## 1 2017-06-01     6 2017 Milestone 1 Complete      0.5         1
+## 2 2017-07-01     7 2017 Milestone 2 Complete     -0.5        -1
+## 3 2017-10-01    10 2017 Milestone 3 Complete      1.0         1
+## 4 2017-12-01    12 2017 Milestone 4 Complete     -1.0        -1
+## 5 2018-01-01     1 2018 Milestone 5 Complete      1.5         1
+## 6 2018-01-01     1 2018 Milestone 6 Complete      1.5         1
+##   month_count text_position
+## 1           1           0.7
+## 2           1          -0.7
+## 3           1           1.2
+## 4           1          -1.2
+## 5           1           1.7
+## 6           2           1.9</code></pre>
+</div>
+<div id="buffering-times" class="section level3" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Buffering times</h3>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="visualisation.html#cb30-1" aria-hidden="true" tabindex="-1"></a>month_buffer <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb30-2"><a href="visualisation.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="visualisation.html#cb30-3" aria-hidden="true" tabindex="-1"></a>month_date_range <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>date) <span class="sc">-</span> <span class="fu">months</span>(month_buffer), <span class="fu">max</span>(df<span class="sc">$</span>date) <span class="sc">+</span> <span class="fu">months</span>(month_buffer), <span class="at">by=</span><span class="st">&#39;month&#39;</span>)</span>
+<span id="cb30-4"><a href="visualisation.html#cb30-4" aria-hidden="true" tabindex="-1"></a>month_format <span class="ot">&lt;-</span> <span class="fu">format</span>(month_date_range, <span class="st">&#39;%b&#39;</span>)</span>
+<span id="cb30-5"><a href="visualisation.html#cb30-5" aria-hidden="true" tabindex="-1"></a>month_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(month_date_range, month_format)</span></code></pre></div>
+</div>
+<div id="decemberjanuary-only" class="section level3" number="6.1.6">
+<h3><span class="header-section-number">6.1.6</span> December/January only</h3>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="visualisation.html#cb31-1" aria-hidden="true" tabindex="-1"></a>year_date_range <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>date) <span class="sc">-</span> <span class="fu">months</span>(month_buffer), <span class="fu">max</span>(df<span class="sc">$</span>date) <span class="sc">+</span> <span class="fu">months</span>(month_buffer), <span class="at">by=</span><span class="st">&#39;year&#39;</span>)</span>
+<span id="cb31-2"><a href="visualisation.html#cb31-2" aria-hidden="true" tabindex="-1"></a>year_date_range <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(</span>
+<span id="cb31-3"><a href="visualisation.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">intersect</span>(</span>
+<span id="cb31-4"><a href="visualisation.html#cb31-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ceiling_date</span>(year_date_range, <span class="at">unit=</span><span class="st">&quot;year&quot;</span>),</span>
+<span id="cb31-5"><a href="visualisation.html#cb31-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">floor_date</span>(year_date_range, <span class="at">unit=</span><span class="st">&quot;year&quot;</span>)</span>
+<span id="cb31-6"><a href="visualisation.html#cb31-6" aria-hidden="true" tabindex="-1"></a>    ),  <span class="at">origin =</span> <span class="st">&quot;1970-01-01&quot;</span></span>
+<span id="cb31-7"><a href="visualisation.html#cb31-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-8"><a href="visualisation.html#cb31-8" aria-hidden="true" tabindex="-1"></a>year_format <span class="ot">&lt;-</span> <span class="fu">format</span>(year_date_range, <span class="st">&#39;%Y&#39;</span>)</span>
+<span id="cb31-9"><a href="visualisation.html#cb31-9" aria-hidden="true" tabindex="-1"></a>year_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(year_date_range, year_format)</span></code></pre></div>
+</div>
+<div id="interactivity" class="section level3" number="6.1.7">
+<h3><span class="header-section-number">6.1.7</span> Interactivity</h3>
+<p>Shiny….</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="feedback.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/davan690/phd-thesis/docs/03-Visualisation_phdPlanning.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub", "thesis.mobi", "thesis.docx"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
