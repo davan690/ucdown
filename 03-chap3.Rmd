@@ -71,7 +71,6 @@ library(knitr)
 flights <- read.csv("data/flights.csv", stringsAsFactors = FALSE)
 ```
 
-
 # Graphics, References, and Labels {#ref-labels}
 
 
@@ -88,9 +87,9 @@ If you need a graphic or tabular material to be part of the text, you can just p
 
 In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reedlogo", and specify that this is a figure.  Make note of the different **R** chunk options that are given in the R Markdown file (not shown in the knitted document).
 
-<!-- # ```{r reedlogo, fig.cap="Reed logo", out.width="0.2\\linewidth", fig.align="center"} -->
-<!-- # # include_graphics(path = "figure/uw-100px.png") -->
-<!-- # ``` -->
+```{r reedlogo, fig.cap="Reed logo", out.width="0.2\\linewidth", fig.align="center"}
+include_graphics(path = "figure/uw-100px.PNG")
+```
 
 <!-- Note the use of `out.width` as a chunk option here. The resulting
 image is 20% of what the linewidth is in LaTeX. You can also center
@@ -121,21 +120,21 @@ A table linking these carrier codes to airline names is available at <https://gi
 
 Next, we will explore the use of the `out.extra` chunk option, which can be used to shrink or expand an image loaded from a file by specifying `"scale= "`. Here we use the mathematical graph stored in the "subdivision.pdf" file.
 
-```{r subd, echo=FALSE, fig.cap="Subdiv. graph", out.extra="scale=0.75"}
-# include_graphics("figure/UC_Logo.png")
-```
+<!-- # ```{r subd, echo=FALSE, fig.cap="Subdiv_graph", out.extra="scale=0.75"} -->
+<!-- # include_graphics(here::here("figure/delaysboxplot1.png")) -->
+<!-- # ``` -->
 
-Here is a reference to this image: Figure \@ref(fig:subd).  Note that `echo=FALSE` is specified so that the **R** code is hidden in the document.
+<!-- Here is a reference to this image: Figure \@ref(fig:subd).  Note that `echo=FALSE` is specified so that the **R** code is hidden in the document. -->
 
 **More Figure Stuff**
 
 Lastly, we will explore how to rotate and enlarge figures using the `out.extra` chunk option.  (Currently this only works in the PDF version of the book.)
 
-```{r subd2, echo=FALSE, out.extra="angle=180, scale=1.1", fig.cap="A Larger Figure, Flipped Upside Down"}
-# include_graphics("figure/logo.png")
-```
-
-As another example, here is a reference: Figure \@ref(fig:subd2).  
+<!-- # ```{r subd2, echo=FALSE, out.extra="angle=180, scale=1.1", fig.cap="A Larger Figure, Flipped Upside Down"} -->
+<!-- # include_graphics(here::here("figure/delaysboxplot1.png")) -->
+<!-- # ``` -->
+<!-- #  -->
+<!-- # As another example, here is a reference: Figure \@ref(fig:subd2).   -->
 
 ## Footnotes and Endnotes
 
