@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Case studies | R Notebook</title>
+  <meta name="description" content="Chapter 9 Case studies | R Notebook" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Case studies | R Notebook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Case studies | R Notebook" />
+  
+  
+  
+
+<meta name="author" content="Anthony Davidson" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="app-mpd.html"/>
+<link rel="next" href="consistency-with-predictions.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Reproducible research</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#preface"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="rmd-basics.html"><a href="rmd-basics.html"><i class="fa fa-check"></i><b>1</b> R Markdown Basics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rmd-basics.html"><a href="rmd-basics.html#lists"><i class="fa fa-check"></i><b>1.1</b> Lists</a></li>
+<li class="chapter" data-level="1.2" data-path="rmd-basics.html"><a href="rmd-basics.html#line-breaks"><i class="fa fa-check"></i><b>1.2</b> Line breaks</a></li>
+<li class="chapter" data-level="1.3" data-path="rmd-basics.html"><a href="rmd-basics.html#r-chunks"><i class="fa fa-check"></i><b>1.3</b> R chunks</a></li>
+<li class="chapter" data-level="1.4" data-path="rmd-basics.html"><a href="rmd-basics.html#inline-code"><i class="fa fa-check"></i><b>1.4</b> Inline code</a></li>
+<li class="chapter" data-level="1.5" data-path="rmd-basics.html"><a href="rmd-basics.html#including-plots"><i class="fa fa-check"></i><b>1.5</b> Including plots</a></li>
+<li class="chapter" data-level="1.6" data-path="rmd-basics.html"><a href="rmd-basics.html#loading-and-exploring-data"><i class="fa fa-check"></i><b>1.6</b> Loading and exploring data</a></li>
+<li class="chapter" data-level="1.7" data-path="rmd-basics.html"><a href="rmd-basics.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="math-sci.html"><a href="math-sci.html"><i class="fa fa-check"></i><b>2</b> Mathematics and Science</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="math-sci.html"><a href="math-sci.html#math"><i class="fa fa-check"></i><b>2.1</b> Math</a></li>
+<li class="chapter" data-level="2.2" data-path="math-sci.html"><a href="math-sci.html#chemistry-101-symbols"><i class="fa fa-check"></i><b>2.2</b> Chemistry 101: Symbols</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="math-sci.html"><a href="math-sci.html#typesetting-reactions"><i class="fa fa-check"></i><b>2.2.1</b> Typesetting reactions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="math-sci.html"><a href="math-sci.html#other-examples-of-reactions"><i class="fa fa-check"></i><b>2.2.2</b> Other examples of reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="math-sci.html"><a href="math-sci.html#physics"><i class="fa fa-check"></i><b>2.3</b> Physics</a></li>
+<li class="chapter" data-level="2.4" data-path="math-sci.html"><a href="math-sci.html#biology"><i class="fa fa-check"></i><b>2.4</b> Biology</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lits.html"><a href="lits.html"><i class="fa fa-check"></i><b>3</b> Literature review</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="lits.html"><a href="lits.html#davidson2020-invasive-species-database"><i class="fa fa-check"></i><b>3.1</b> <code>[Davidson2020-Invasive species database]</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ref-labels.html"><a href="ref-labels.html"><i class="fa fa-check"></i><b>4</b> Graphics, References, and Labels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ref-labels.html"><a href="ref-labels.html#figures"><i class="fa fa-check"></i><b>4.1</b> Figures</a></li>
+<li class="chapter" data-level="4.2" data-path="ref-labels.html"><a href="ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>4.2</b> Footnotes and Endnotes</a></li>
+<li class="chapter" data-level="4.3" data-path="ref-labels.html"><a href="ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>4.3</b> Bibliographies</a></li>
+<li class="chapter" data-level="4.4" data-path="ref-labels.html"><a href="ref-labels.html#anything-else"><i class="fa fa-check"></i><b>4.4</b> Anything else?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>5</b> Feedback loop</a></li>
+<li class="chapter" data-level="6" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>6</b> Visualisation</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="visualisation.html"><a href="visualisation.html#action-tasks"><i class="fa fa-check"></i><b>6.0.1</b> Action tasks</a></li>
+<li class="chapter" data-level="6.1" data-path="visualisation.html"><a href="visualisation.html#ggplot2"><i class="fa fa-check"></i><b>6.1</b> <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="visualisation.html"><a href="visualisation.html#milestones-timeline"><i class="fa fa-check"></i><b>6.1.1</b> Milestones timeline</a></li>
+<li class="chapter" data-level="6.1.2" data-path="visualisation.html"><a href="visualisation.html#factoring"><i class="fa fa-check"></i><b>6.1.2</b> Factoring</a></li>
+<li class="chapter" data-level="6.1.3" data-path="visualisation.html"><a href="visualisation.html#direction"><i class="fa fa-check"></i><b>6.1.3</b> Direction</a></li>
+<li class="chapter" data-level="6.1.4" data-path="visualisation.html"><a href="visualisation.html#counts"><i class="fa fa-check"></i><b>6.1.4</b> Counts</a></li>
+<li class="chapter" data-level="6.1.5" data-path="visualisation.html"><a href="visualisation.html#buffering-times"><i class="fa fa-check"></i><b>6.1.5</b> Buffering times</a></li>
+<li class="chapter" data-level="6.1.6" data-path="visualisation.html"><a href="visualisation.html#decemberjanuary-only"><i class="fa fa-check"></i><b>6.1.6</b> December/January only</a></li>
+<li class="chapter" data-level="6.1.7" data-path="visualisation.html"><a href="visualisation.html#interactivity"><i class="fa fa-check"></i><b>6.1.7</b> Interactivity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="chapter" data-level="7" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>7</b> Case studies</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="case-studies.html"><a href="case-studies.html#appbeech"><i class="fa fa-check"></i><b>7.1</b> Beech Forests</a></li>
+<li class="chapter" data-level="7.2" data-path="case-studies.html"><a href="case-studies.html#app-mpd"><i class="fa fa-check"></i><b>7.2</b> Mixed Podocarp forests</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="case-studies.html"><a href="case-studies.html#app-mpd"><i class="fa fa-check"></i><b>8</b> Mixed Podocarp forests</a></li>
+<li class="chapter" data-level="9" data-path="case-studies-1.html"><a href="case-studies-1.html"><i class="fa fa-check"></i><b>9</b> Case studies</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="case-studies-1.html"><a href="case-studies-1.html#beech"><i class="fa fa-check"></i><b>9.1</b> Beech Forests</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="case-studies-1.html"><a href="case-studies-1.html#davidson2020-beech-forests"><i class="fa fa-check"></i><b>9.1.1</b> <code>[Davidson2020-Beech-forests]</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="case-studies-1.html"><a href="case-studies-1.html#mpd"><i class="fa fa-check"></i><b>9.2</b> Mixed Podocarp forests</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="case-studies-1.html"><a href="case-studies-1.html#davidson2020-mpd-forests"><i class="fa fa-check"></i><b>9.2.1</b> <code>[Davidson2020-MPD-forests]</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html"><i class="fa fa-check"></i><b>10</b> Consistency with predictions</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html#intro-predictions"><i class="fa fa-check"></i><b>10.0.1</b> Intro predictions:</a></li>
+<li class="chapter" data-level="10.1" data-path="consistency-with-predictions.html"><a href="consistency-with-predictions.html#methods-predictions"><i class="fa fa-check"></i><b>10.1</b> Methods predictions:</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="the-first-appendix.html"><a href="the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="the-second-appendix-for-fun.html"><a href="the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="C" data-path="discus.html"><a href="discus.html"><i class="fa fa-check"></i><b>C</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="discus.html"><a href="discus.html#davidson2020-pfnz2050"><i class="fa fa-check"></i><b>C.1</b> <code>[Davidson2020-PFNZ2050]</code></a></li>
+<li class="chapter" data-level="C.2" data-path="discus.html"><a href="discus.html#manual-references"><i class="fa fa-check"></i><b>C.2</b> Manual References</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Notebook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="case-studies-1" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Case studies</h1>
+<p>I then apply a Bayesian modelling framework to two case studies, incorperating increased complexity from beech forests (Chapter Two) t mixed forest dynamics (Chapter Three) in NZ forests. Each case study consists of high quality CR datasets. The CR study design allows me to encorperate both the proposed ecological processes (e.g. predation) know to drive populations and the observation error (e.g. estimating population size) from the research synthesis.</p>
+<div id="beech" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Beech Forests</h2>
+<p>Compare the importance of bottom-up and top-down processes in regulating invasive species in New Zealand forests.</p>
+<div id="davidson2020-beech-forests" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> <code>[Davidson2020-Beech-forests]</code></h3>
+<p><strong>Title:</strong> Merky forests. What can we expect from stoat control in NZ forests? - Food vs. Predation.</p>
+<p><strong>Status:</strong> <a href="https://www.dropbox.com/s/m5hte0n2vyl1dt2/Davidson_2019_BeechForest_19022019.docx?dl=0">1st draft with Richard</a></p>
+<p><strong>Abstract:</strong> This research paper clarifies the discrepancy between two previous modelling papers; both suggesting that mesopredator release of rodents is possible in New Zealand forest systems and; several field studies that have presented limited but conflicting support for increases in mouse abundance following pest control. We used an experimental design to test the differences between the two publications and found that there is no evidence to suggest mice will become more abundant after predator removal. Additional options and WR guidelines can be found here.</p>
+</div>
+</div>
+<div id="mpd" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Mixed Podocarp forests</h2>
+<p>A more complex set of interacting invasive species.</p>
+<div id="davidson2020-mpd-forests" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> <code>[Davidson2020-MPD-forests]</code></h3>
+<p><strong>Title:</strong> Merky forests. What can we expect from stoat control in NZ forests? - Food vs. Predation.</p>
+<p><strong>Status:</strong> <a href="https://www.dropbox.com/s/fm57ns1jndmkmq1/Davidson_2019_mpd_manuscript.docx?dl=0">Analysis underway</a></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="app-mpd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consistency-with-predictions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/davan690/phd-thesis/docs/04-thesis-applications.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub", "thesis.mobi", "thesis.docx"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

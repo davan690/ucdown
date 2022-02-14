@@ -1,0 +1,63 @@
+eventCode,shortName,week,month,semester,year,startDate,finishDate,startTime,endTime,project,individualsNEEDED,milestone,status,description
+routine202010080001,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,5:30,6:10,personal,Anthony,kids,Dayly,
+routine202010080002,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,6:11,6:30,personal,Anthony,breakfast ,Dayly,
+routine202010080003,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,6:31,7:00,personal,Anthony,Newsbulls,Dayly,
+routine202010080004,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,7:01,7:25,personal,Anthony,shower,Dayly,
+routine202010080005,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,7:26,9:30,personal,Anthony,cafe,Dayly,
+routine202010080006,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,9:31,10:00,personal,Anthony,morningt,Dayly,
+routine202010080007,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,10:01,18:00,Phd,Anthony,work,Dayly,
+routine202010080009,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,18:01,19:00,personal,Anthony,food/dinner,Dayly,
+routine2020100800010,DaylyRoutine,,august,s2,2020,11/8/2020,11/8/2020,19:00,22:00,personal,Anthony,skate,Dayly,
+routine2020100800011,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,5:30,6:10,personal,Anthony,kids,Dayly,
+routine2020100800012,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,6:11,6:30,personal,Anthony,breakfast ,Dayly,
+routine2020100800013,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,6:31,7:00,personal,Anthony,Newsbulls,Dayly,
+routine2020100800014,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,7:01,7:25,personal,Anthony,shower,Dayly,
+routine2020100800015,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,7:26,9:30,personal,Anthony,cafe,Dayly,
+routine2020100800016,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,9:31,10:00,personal,Anthony,morningt,Dayly,
+routine2020100800017,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,10:01,18:00,Phd,Anthony,work,Dayly,
+routine2020100800019,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,18:01,19:00,personal,Anthony,food/dinner,Dayly,
+routine2020100800020,DaylyRoutine,,august,s2,2020,12/8/2020,12/8/2020,19:00,22:00,personal,Anthony,skate,Dayly,
+scr20200701026,AcademicBoard,,august,,2020,5/8/2020,5/8/2020,9:00,15:00,src,,srcmilestone26,On Target,Academic Board (Majid/Josh)
+council20200701001,CouncilReading,,august,,2020,21/08/2020,28/08/2020,9:00,15:00,src,Anthony,srcmilestone32,On Target,
+council20200701006,CouncilSITTING,,august,,2020,28/08/2020,28/08/2020,9:00,17:00,council,Emma; Anthony,srcmilestone39,On Target,
+scr20200701007,nic21st,,august,,2020,1/8/2020,1/8/2020,13:00,15:00,src,,srcmilestone7,On Target,Nicks 21st Birthday
+scr20200701006,openDay,,august,,2020,1/8/2020,1/8/2020,9:00,15:00,src,,srcmilestone6,On Target,Open Day 22nd
+scr20200701003,ReasonStatement,,august,,2020,1/8/2020,1/8/2020,9:00,15:00,src,,srcmilestone3,On Target,Statement of reasons due (late Aug)
+scr20200701004,SSAFsurvey,,august,,2020,1/8/2020,1/8/2020,9:00,15:00,src,,srcmilestone4,On Target,SSAF Survey
+scr20200701005,TownHall2,,august,,2020,1/8/2020,1/8/2020,9:00,15:00,src,,srcmilestone5,On Target,Town HAll
+scr20200701025,Wk1,1,august,,2020,3/8/2020,10/8/2020,9:00,15:00,src,,srcmilestone25,On Target,Wk 1
+scr20200701016,councilReport,,december,,2020,1/12/2020,1/12/2020,9:00,15:00,src,,srcmilestone16,On Target,Council Report
+council20200701006,CouncilSITTING,,december,,2020,11/12/2020,11/12/2020,9:00,17:00,council,Emma; Anthony,srcmilestone41,On Target,
+scr20200701018,disabilityDay,,december,,2020,12/3/2020,12/3/2020,9:00,15:00,src,,srcmilestone18,On Target,International disability day
+scr20200701017,SSAFacq,,december,,2020,1/12/2020,1/12/2020,9:00,15:00,src,,srcmilestone17,On Target,SSAF Acquittal
+scr20200701041,UEC,,december,,2020,2/12/2020,2/12/2020,9:00,15:00,src,Josephine,srcmilestone51,On Target,UEC (Josephine)
+scr20200701002,Oweek,,july,,2020,27/07/2020,31/07/2020,9:00,22:00,src,,srcmilestone2,Complete,O week for semester two
+scr20200701023,UEC,,july,,2020,15/07/2020,15/07/2020,9:00,15:00,src,Josephine,srcmilestone23,Complete,UEC (Josephine)
+scr20200701024,URC,,july,,2020,16/07/2020,16/07/2020,9:00,15:00,src,,srcmilestone24,Complete,URC
+scr20200701022,Wtcensus,,july,,2020,9/7/2020,9/7/2020,9:00,15:00,src,census,srcmilestone22,Complete,WT Census
+scr20200701019,AcademicBoard,,june,,2020,3/6/2020,3/6/2020,9:00,15:00,src,Majid; Josh,srcmilestone19,Complete,Academic Board (Majid/Josh)
+scr20200701020,AcademicIntegrity,,june,,2020,4/6/2020,4/6/2020,9:00,15:00,src,Lola; Hamish; Nick,srcmilestone20,Complete,Academic Integrity Mtg (Lola/Hamish/Nick)                               Student Equity & Advisory Group (TBD)
+scr20200701021,GradesReleased,,june,,2020,17/06/2020,17/06/2020,9:00,15:00,src,students,srcmilestone21,Complete,Grades released for previous term. Issues with Protorial
+scr20200701001,WorldRefDay,,june,,2020,20/06/2020,20/06/2020,9:00,15:00,src,,srcmilestone1,Complete,World Refugee Day
+scr20200701040,AcademicBoard,,november,,2020,18/11/2020,18/11/2020,9:00,15:00,src,,srcmilestone50,On Target,Academic Board (Josh/Majid)
+scr20200701014,Exams,,november,,2020,1/11/2020,1/11/2020,9:00,15:00,src,,srcmilestone14,On Target,Exams
+scr20200701039,NAIDOC,,november,,2020,8/11/2020,8/11/2020,9:00,15:00,src,,srcmilestone49,On Target,NAIDOC WEEK
+scr20200701015,Results,,november,,2020,1/11/2020,1/11/2020,9:00,15:00,src,,srcmilestone15,On Target,Results
+council20200701006,CouncilSITTING,,october,,2020,23/10/2020,23/10/2020,9:00,17:00,council,Emma; Anthony,srcmilestone40,On Target,
+scr20200701030,mentalHealth,,october,,2020,10/10/2020,10/10/2020,9:00,15:00,src,,srcmilestone30,On Target,
+scr20200701012,NAIDOC,,october,,2020,1/10/2020,1/10/2020,9:00,15:00,src,,srcmilestone12,On Target,NAIDOC
+scr20200701031,SRCmeeting,,october,,2020,22/10/2020,22/10/2020,9:00,15:00,src,all council members,srcmilestone31,On Target,Student council meeting
+scr20200701038,UAC,,october,,2020,29/10/2020,29/10/2020,9:00,17:00,src,Josephine,srcmilestone48,On Target,UAC (Josephine)
+scr20200701037,UEC,,october,,2020,28/10/2020,28/10/2020,9:00,17:00,src,Josephine,srcmilestone47,On Target,UEC (Josephine)
+scr20200701036,URC,,october,,2020,22/10/2020,22/10/2020,9:00,17:00,src,,srcmilestone46,On Target,URC
+scr20200701029,AcademicBoard,,september,,2020,30/09/2020,30/09/2020,9:00,15:00,src,,srcmilestone29,On Target,Academic Board (Majid/Josh)
+scr20200701032,CensusDate,,september,,2020,4/9/2020,4/9/2020,9:00,15:00,src,,srcmilestone42,On Target,Census Date
+scr20200701009,Grad,,september,,2020,1/9/2020,1/9/2020,9:00,15:00,src,,srcmilestone9,On Target,Graduation
+scr20200701011,RUOKDay,,september,,2020,1/9/2020,1/9/2020,9:00,15:00,src,,srcmilestone11,On Target,RUOKDay
+scr20200701027,SRCmeeting,,september,,2020,3/9/2020,3/9/2020,9:00,15:00,src,all council members,srcmilestone27,On Target,Student council meeting
+scr20200701028,SRCreading,,september,,2020,3/9/2020,3/9/2020,9:00,15:00,src,all council members,srcmilestone28,On Target,Student council meeting
+scr20200701008,SSAFbids,,september,,2020,1/9/2020,1/9/2020,9:00,15:00,src,,srcmilestone8,On Target,SSAF Bids Due
+scr20200701010,SSAFFunds,,september,,2020,1/9/2020,1/9/2020,9:00,15:00,src,,srcmilestone10,On Target,SSAF Committeess
+scr20200701034,UAC,,september,,2020,10/9/2020,10/9/2020,9:00,15:00,src,Josephine,srcmilestone44,On Target,UAC (Josephine) RUOK Day
+scr20200701033,UEC,,september,,2020,9/9/2020,9/9/2020,9:00,15:00,src,Josephine,srcmilestone43,On Target,UEC (Josephine)
+scr20200701035,AcademicBoard,,september,,2020,30/09/2020,30/09/2020,9:00,15:00,src,,srcmilestone45,On Target,Academic Board (Josh/Majid)

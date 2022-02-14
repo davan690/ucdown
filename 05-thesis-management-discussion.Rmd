@@ -1,0 +1,13 @@
+# Discussion {#discus}
+
+The computationally reproducible framework I create and apply in this thesis are a key aspect of achieving PFNZ2050. I explain why this is and apply these new reproduciblity measures to replicate theoretical processes and visualise new data to account for dynamic changes in observd outcomes of predator control. This chapter puts my thesis in the context of global control programs.
+
+## `[Davidson2020-PFNZ2050]`
+
+**Title:** *Dealing with Reproducibility for invasive species research in New Zealand*
+
+**Abstract:** Science is currently undergoing a "Reproducibility crisis" [@Baker2016a]. During the past four years this movement has developed tools and methods to ilimate certian aspects of this crisis with respect to computating software and platforms. The New Zealand goverment also released the PFNZ 2050 innitive in 2016 (cite). Much debate and discussion has come about [@linklater2018]. Resources and man-power are driven by communities for New Zealands predator-free NZ 2050 to achieve targets. If these predator targets are not repeatable, it will not be possible to scale control to a national, human-inhabited enviroment due to the exessive unexpected outcomes are likely. 
+
+**Status:** Frameworks working...need to write up.
+
+**NOTE:** This may not become a publication before I submit thesis however, there could be a good opportunity to extend this paper here: [@Peng2015] with my work as a five year check/advancements... *This could be added to a database as an intervention?*

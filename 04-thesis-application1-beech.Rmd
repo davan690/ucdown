@@ -1,0 +1,24 @@
+---
+always_allow_html: true
+---
+
+# Case studies
+
+I then apply a Bayesian modelling framework to two case studies, incorperating increased complexity from beech forests (Chapter Two) t mixed forest dynamics (Chapter Three) in NZ forests. Each case study consists of high quality CR datasets. The CR study design allows me to encorperate both the proposed ecological processes (e.g. predation) know to drive populations and the observation error (e.g. estimating population size) from the research synthesis.
+
+## Beech Forests {#appbeech}
+
+Compare the importance of bottom-up and top-down processes in regulating invasive species in New Zealand forests.
+
+*[publication: Davidson2020-Beech-forests]*
+
+
+
+## Mixed Podocarp forests {#app-mpd}
+
+A more complex set of interacting invasive species.
+
+*[publication: Davidson2020-MPD-forests]*
+
+
+

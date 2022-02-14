@@ -7,6 +7,7 @@
 % 04 Dec 2001 	Sam Noble	Class file
 % 03 Sep 1995	David Perkinson	Title Page
 % Acknowledgements Page, David Perkinson & Sam Noble
+% Anthony Davidson modified for UC bookdown project 2022
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
@@ -24,7 +25,11 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
+<<<<<<< HEAD
 \ProvidesClass{ucthesis}[UC Thesis Class]
+=======
+\ProvidesClass{ucthesis}[2022/02/02 University of Canberra Thesis Template]
+>>>>>>> f82344a12ad3dd512b550b819c31eec419cfb867
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
@@ -227,8 +232,8 @@
       \nobreak\hb@xt@\@pnumwidth{\bfseries \hss #2}\par
       \penalty\@highpenalty
     \endgroup
-  \fi}
-
+  \fi} 
+%is there error here?
 %%% Added by CII
 \newenvironment{acknowledgements}{%
   \if@twocolumn
@@ -274,10 +279,10 @@
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{!\RTpercent University of Canberra Thesis Template 2022/02/02 SN}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent University of Canberra Thesis Template 2022/02/02 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator	(University of Canberra Thesis Template 2022/02/02 SN)}}
 \fi
 
 % I hacked the title page to all be the same font size

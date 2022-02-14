@@ -1,0 +1,17 @@
+---
+always_allow_html: true
+---
+
+# Literature review {#lits}
+
+I estimate the effects of predator control from these models but addionationally provide a reproducible workflow in systems with and without stoat control, varying control methods and differences in resources flow between these systems (Chapter Four).
+
+## `[Davidson2020-Invasive species database]`
+
+**Title:** *A database (DB) for invasive species in New Zealand (NZ)*
+
+**Abstract:** Creating a database of research to understand the current knowledge of observation and/or population level demographics of New Zealand invasive species.
+
+**Status:** Developing off `Walker et al 2019`. Using `dataspice` package to create baseline dataset including `Clarke et al 2019` experimental design.
+
+**NOTE:** This is already part of a standard literature review and if this does not get any further than that it is a bonus.

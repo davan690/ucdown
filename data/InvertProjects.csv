@@ -1,0 +1,13 @@
+﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,individualsNEEDED,week,year,milestone,status
+invert20200701001,emailCONTACT,july,1/7/2020,1/7/2020,10:00,12:00,General email proposing opportunity to several students,invert,Anthony,1,2020,invertmilestone1,Complete
+invert20200701002,firstMEET,july,8/7/2020,8/8/2020,10:00,11:00,Did not happen. Looked at project instead,invert,Anthony,2,2020,invertmilestone2,Complete
+invert20200701003,secondMEET,july,15/07/2020,15/07/2020,10:00,11:00,"Ben, Dani and Anthony. No data yet. Ben will send",invert,Anthony,3,2020,invertmilestone3,Missed
+invert20200701004,setupProject,july,17/07/2020,17/07/2020,9:00,13:00,Setup git and other simple R scripts,invert,Anthony,3,2020,invertmilestone4,Complete
+invert20200701005,thirdMEETING,july,23/07/2020,23/07/2020,14:00,16:00,Discussed the complexity of  the project and the importance of consise and strong background understanding before analysis to be undertaken. (Don’t have correct dataset yet),invert,Anthony,3,2020,invertmilestone5,On Target
+invert20200701006,setupProject,july,24/07/2020,24/07/2020,9:00,13:00,Working in timesheets and project overview,invert,Anthony,4,2020,invertmilestone6,On Target
+invert20200701007,Research,july,25/07/2020,27/07/2020,9:00,11:00,Doing some background reading to get up to speed,invert,Anthony,4,2020,invertmilestone7,On Target
+invert20200701008,fourthMEETING,july,29/07/2020,29/07/2020,14:00,16:00,general catch-up,invert,Anthony; Dani,5,2020,invertmilestone8,On Target
+invert20200701009,fifthMEETING,august,5/8/2020,5/8/2020,14:00,16:00,general catch-up,invert,Anthony; Dani,6,2020,invertmilestone9,On Target
+invert20200701010,sixthMEETING,august,12/8/2020,12/8/2020,14:00,16:00,general catch-up,invert,Anthony; Dani,7,2020,invertmilestone10,On Target
+invert20200701011,seventhMEETING,august,19/08/2020,11/8/2020,10:30,11:00,Ben discussing data and other eco project,invert,Ben; Anthony,8,2020,invertmilestone11,On Target
+invert20200701012,eighthMEETING,august,26/08/2020,26/08/2020,14:00,16:00,general catch-up,invert,Anthony; Dani,9,2020,invertmilestone12,On Target

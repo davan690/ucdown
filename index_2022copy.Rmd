@@ -1,0 +1,55 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Submission
+
+3.4. A candidate must sign a declaration that the thesis does notcontain any material published or
+written by another person except where due reference is made in the text or footnotes.
+
+Material
+
+produced jointly by acandidate and his/her supervisors or others can only be included in the narrative of
+the thesis if the candidate was explicitly involved in the original work. Any jointly-produced material in
+the examination submission must be accompanied by astatementclearly indicatingthe candidate’s
+contribution to the research.
+
+3.5. No material or publications presented for examination for any other degree within this or any other
+institution will be submitted for assessment unless its incorporation in the thesis is declared in a
+statement.
+Content and structural requirements for the thesis
+
+3.6. A doctoral thesis must make a distinctand significantcontribution to knowledge or understanding
+in the area of research and/or the application of knowledge to the analysis of problems in the study area;
+and mustafford evidence of originality.
+
+3.7. A masters thesis shall display asound knowledge of the field of the research and include
+substantialcritical review of the field.
+3.8. Subject to permission being obtained from publishers if necessary, the copyright of the thesis is
+deemed to be vested in the author.The relevant University policy for intellectual property principles as
+they relate to Higher Degree by Research candidates is the Intellectual Property Policy.
+
+3.9. The followingapplies to the length of the thesis:
+A thesis submitted for a Doctor of Philosophy degree should not exceed 100,000 words;
+A thesis submitted for a Professional Doctorate degree should not exceed 60,000 words;
+A thesis submitted for a Masters by Research degree should not exceed 60,000 words.
+
+3.10. Thesis requirements will in part be dictated by disciplinary requirements and the type of thesis
+produced.See Higher Degree by Research Thesis Submission and Examination Guidelines for the thesis
+requirements of submissions for examination, includingspecificguidelines and requirements for the
+submission ofathesis consisting of published work.
+Format requirements for the thesis
+
+3.11. The University has aset ofgeneric formattingrequirements for theses[1].These requirements are
+set on in the Higher Degree by Research ThesisSubmission and Examination Guidelines.
+
+3.12. It is expected that the supervisory panel will provide editorialadvice to the candidate.
+
+3.13. Candidates may use a professional editor in preparingtheir thesis for submission but must strictly
+follow the guidelines set out in the Higher Degree by Research ThesisSubmission and Examination
+
+Guidelines.
+
+[1]For research theses incorporatingcreative production these formattingrequirements relate to the
+exegeticalcomponent of the thesis

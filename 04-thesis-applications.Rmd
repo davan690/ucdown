@@ -1,0 +1,59 @@
+---
+always_allow_html: true
+---
+
+# Case studies
+
+I then apply a Bayesian modelling framework to two case studies, incorperating increased complexity from beech forests (Chapter Two) t mixed forest dynamics (Chapter Three) in NZ forests. Each case study consists of high quality CR datasets. The CR study design allows me to encorperate both the proposed ecological processes (e.g. predation) know to drive populations and the observation error (e.g. estimating population size) from the research synthesis.
+
+## Beech Forests {#beech}
+
+Compare the importance of bottom-up and top-down processes in regulating invasive species in New Zealand forests.
+
+### `[Davidson2020-Beech-forests]`
+
+```{r}
+
+```
+
+**Title:** Merky forests. What can we expect from stoat control in NZ forests? - Food vs. Predation.
+
+**Status:** [1st draft with Richard](https://www.dropbox.com/s/m5hte0n2vyl1dt2/Davidson_2019_BeechForest_19022019.docx?dl=0)
+
+**Abstract:** This research paper clarifies the discrepancy between two previous modelling papers; both suggesting that mesopredator release of rodents is possible in New Zealand forest systems and; several field studies that have presented limited but conflicting support for increases in mouse abundance following pest control. We used an experimental design to test the differences between the two publications and found that there is no evidence to suggest mice will become more abundant after predator removal. Additional options and WR guidelines can be found here.
+
+## Mixed Podocarp forests {#mpd}
+
+A more complex set of interacting invasive species.
+
+### `[Davidson2020-MPD-forests]`
+
+**Title:** Merky forests. What can we expect from stoat control in NZ forests? - Food vs. Predation.
+
+**Status:** [Analysis underway](https://www.dropbox.com/s/fm57ns1jndmkmq1/Davidson_2019_mpd_manuscript.docx?dl=0)
+
+# Consistency with predictions
+
+### Intro predictions:
+
+A) during non-mast years when little seed is available, 
+
+B) at the peak of mouse abundance (during winter and spring in mast years), 
+
+C) mouse populations should increase in size more rapidly in response to increased seed availability in mast years with stoat control than without; 
+
+D) mouse populations should decline from peak abundance more slowly in mast years with stoat control than without.
+
+## Methods predictions:
+
+A) Lower abundance in non-mast years;
+
+B) Higher peak abundance in mast years;
+
+C) A faster rate of increase in response to high seed availability in late summer during mast years;
+
+D) A slower rate decline from peak abundance during mast years;
+
+E) Predictions A-D should hold only when both stoat and rats are controlled.
+Results predictions:
+

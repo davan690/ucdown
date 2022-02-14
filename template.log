@@ -1,10 +1,15 @@
+<<<<<<< HEAD:template.log
 This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.27)  4 FEB 2022 20:14
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.27)  5 FEB 2022 17:00
+>>>>>>> f82344a12ad3dd512b550b819c31eec419cfb867:thesis.log
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **template.tex
 (./template.tex
 LaTeX2e <2021-11-15> patch level 1
+<<<<<<< HEAD:template.log
 L3 programming layer <2022-01-21> (./ucthesis.cls
 Document Class: ucthesis 2004/01/27 The Reed College Thesis Class
 (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/book.cls
@@ -769,4 +774,47 @@ PDF statistics:
  122 compressed objects within 2 object streams
  30 named destinations out of 1000 (max. 500000)
  26630 words of extra memory for PDF output out of 29859 (max. 10000000)
+=======
+L3 programming layer <2022-01-21> (c:/Users/Home1_local/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count185
+\l__pdf_internal_box=\box50
+)
+No file thesis.aux.
+\openout1 = `thesis.aux'.
 
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \begin{document}
+                      
+Here is how much of TeX's memory you used:
+ 185 strings out of 480247
+ 5164 string characters out of 5893982
+ 288748 words of memory out of 5000000
+ 18224 multiletter control sequences out of 15000+600000
+ 469259 words of font info for 28 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 24i,0n,34p,135b,40s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> f82344a12ad3dd512b550b819c31eec419cfb867:thesis.log
+
+!  ==> Fatal error occurred, no output PDF file produced!
